@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { LegalPage } from "@/components/legal-page";
-import { SUPPORT_EMAIL } from "@/lib/site";
+import { SITE_URL, SUPPORT_EMAIL } from "@/lib/site";
 
-export const metadata: Metadata = { title: "Terms of Service", description: "The rules and conditions for accessing and using Vely.", alternates: { canonical: "/terms" } };
+export const metadata: Metadata = { title: "Terms of Service", description: "The rules and conditions for accessing and using Vely.", alternates: { canonical: `${SITE_URL}/terms` } };
 
 export default function TermsPage() {
   return <main id="main-content"><LegalPage title="Terms of Service" description="These terms govern access to and use of the Vely mobile application and related services.">

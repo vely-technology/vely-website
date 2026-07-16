@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Icon } from "@/components/icons";
 import { PageHero } from "@/components/page-hero";
-import { SUPPORT_EMAIL } from "@/lib/site";
+import { SITE_URL, SUPPORT_EMAIL } from "@/lib/site";
 import { TrackedEmail } from "@/components/tracked-link";
 
-export const metadata: Metadata = { title: "Support", description: "Get help with your Vely account, OTP, profile, discovery, matches, subscriptions, safety, and account deletion.", alternates: { canonical: "/support" } };
+export const metadata: Metadata = { title: "Support", description: "Get help with your Vely account, OTP, profile, discovery, matches, subscriptions, safety, and account deletion.", alternates: { canonical: `${SITE_URL}/support` } };
 
 const topics = [
   ["Account and login", "Vely sends a one-time code to your email. Check spam, confirm the email address, and wait before requesting another code. Never share an OTP with anyone."],

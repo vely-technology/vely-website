@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { LegalPage } from "@/components/legal-page";
-import { SUPPORT_EMAIL } from "@/lib/site";
+import { SITE_URL, SUPPORT_EMAIL } from "@/lib/site";
 
-export const metadata: Metadata = { title: "Privacy Policy", description: "How Vely collects, uses, shares, protects, and deletes personal information.", alternates: { canonical: "/privacy" } };
+export const metadata: Metadata = { title: "Privacy Policy", description: "How Vely collects, uses, shares, protects, and deletes personal information.", alternates: { canonical: `${SITE_URL}/privacy` } };
 
 export default function PrivacyPage() {
   return <main id="main-content"><LegalPage title="Privacy Policy" description="This policy explains the information Vely handles, why we use it, and the choices available to you.">

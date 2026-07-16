@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Icon } from "@/components/icons";
 import { PageHero } from "@/components/page-hero";
+import { SITE_URL } from "@/lib/site";
 
-export const metadata: Metadata = { title: "Safety", description: "Learn about Vely's adults-only rules, profile verification, reporting, blocking, privacy, and safer meeting guidance.", alternates: { canonical: "/safety" } };
+export const metadata: Metadata = { title: "Safety", description: "Learn about Vely's adults-only rules, profile verification, reporting, blocking, privacy, and safer meeting guidance.", alternates: { canonical: `${SITE_URL}/safety` } };
 
 const pillars = [
   ["shield", "Adults only", "Vely is for people aged 18 and above. Accounts belonging to minors are not permitted and should be reported immediately."],

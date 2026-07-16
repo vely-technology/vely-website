@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { LegalPage } from "@/components/legal-page";
-import { ADMIN_EMAIL, SUPPORT_EMAIL } from "@/lib/site";
+import { ADMIN_EMAIL, SITE_URL, SUPPORT_EMAIL } from "@/lib/site";
 
-export const metadata: Metadata = { title: "Delete Your Account", description: "How to request permanent deletion of your Vely account and associated personal information.", alternates: { canonical: "/delete-account" } };
+export const metadata: Metadata = { title: "Delete Your Account", description: "How to request permanent deletion of your Vely account and associated personal information.", alternates: { canonical: `${SITE_URL}/delete-account` } };
 
 export default function DeleteAccountPage() {
   return <main id="main-content"><LegalPage title="Delete your account" description="Account deletion is permanent. Review what happens, cancel any active subscription, and choose one of the request methods below.">

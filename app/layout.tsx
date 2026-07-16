@@ -16,10 +16,10 @@ export const metadata: Metadata = {
   description: "Vely is an adults-only social discovery app for singles and couples to meet people, make friends, and build meaningful connections nearby.",
   applicationName: "Vely",
   keywords: ["social discovery app", "meet people nearby", "friendship app", "singles and couples", "Vely"],
-  alternates: { canonical: "/" },
-  openGraph: { type: "website", siteName: "Vely", title: "Meet people who match your vibe", description: "Social discovery for singles and couples.", url: SITE_URL, images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Vely — Meet people who match your vibe" }] },
-  twitter: { card: "summary_large_image", title: "Vely — Meet people who match your vibe", description: "Social discovery for singles and couples.", images: ["/og-image.png"] },
-  icons: { icon: "/icon.svg" },
+  alternates: { canonical: SITE_URL },
+  openGraph: { type: "website", siteName: "Vely", title: "Meet people who match your vibe", description: "Social discovery for singles and couples.", url: SITE_URL, images: [{ url: `${SITE_URL}/og-image.png`, width: 1200, height: 630, alt: "Vely — Meet people who match your vibe" }] },
+  twitter: { card: "summary_large_image", title: "Vely — Meet people who match your vibe", description: "Social discovery for singles and couples.", images: [`${SITE_URL}/og-image.png`] },
+  icons: { icon: `${SITE_URL}/icon.svg` },
 };
 
 export const viewport: Viewport = { themeColor: "#7A244F", colorScheme: "light" };
