@@ -42,6 +42,7 @@ jobs:
           GITHUB_PAGES_CUSTOM_DOMAIN: "true"
           NEXT_PUBLIC_SITE_URL: https://joinvely.com
           NEXT_PUBLIC_PLAY_STORE_URL: https://play.google.com/store/apps/details?id=com.vely.app
+          NEXT_PUBLIC_GA_MEASUREMENT_ID: G-NVNG7NVEME
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
