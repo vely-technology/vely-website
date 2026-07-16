@@ -32,13 +32,13 @@ The Next.js configuration preserves old `.html` legal paths when they are reques
 
 ### GitHub Pages
 
-The repository includes `.github/workflows/deploy-pages.yml`. In GitHub, open **Settings → Pages** and set **Source** to **GitHub Actions**. Every push to `main` will verify the project, export static HTML into `out/`, and publish it at:
+The repository includes `.github/workflows/deploy-pages.yml`. In GitHub, open **Settings → Pages** and set **Source** to **GitHub Actions**. Every push to `main` verifies the project and exports static HTML into `out/` for the custom domain:
 
-`https://vely-technology.github.io/vely-website/`
+`https://joinvely.com/`
 
 Do not select “Deploy from a branch”; that publishes repository files and displays the README instead of building the Next.js application.
 
-When `joinvely.com` is ready, add it under the GitHub Pages custom-domain setting, set `GITHUB_PAGES_CUSTOM_DOMAIN=true` for the build, and update `NEXT_PUBLIC_SITE_URL` in the workflow to the custom domain.
+The static export contains `public/CNAME`, and the workflow enables root-path assets for the custom domain. In Namecheap BasicDNS, point the apex to GitHub Pages' four documented A records and point `www` to `vely-technology.github.io`. Keep all MX, SPF, DKIM, DMARC, and other email records unchanged.
 
 ## Content safety
 

@@ -39,7 +39,8 @@ jobs:
       - name: Build static website
         run: npm run build
         env:
-          NEXT_PUBLIC_SITE_URL: https://vely-technology.github.io/vely-website
+          GITHUB_PAGES_CUSTOM_DOMAIN: "true"
+          NEXT_PUBLIC_SITE_URL: https://joinvely.com
           NEXT_PUBLIC_PLAY_STORE_URL: https://play.google.com/store/apps/details?id=com.vely.app
 
       - name: Upload Pages artifact
