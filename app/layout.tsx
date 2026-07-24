@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   alternates: { canonical: SITE_URL },
   openGraph: { type: "website", siteName: "Vely", title: "Meet people who match your vibe", description: "Social discovery for singles and couples.", url: SITE_URL, images: [{ url: `${SITE_URL}/og-image.png`, width: 1200, height: 630, alt: "Vely — Meet people who match your vibe" }] },
   twitter: { card: "summary_large_image", title: "Vely — Meet people who match your vibe", description: "Social discovery for singles and couples.", images: [`${SITE_URL}/og-image.png`] },
-  icons: { icon: `${SITE_URL}/icon.svg` },
+  icons: { icon: `${SITE_URL}/app-icon.png`, apple: `${SITE_URL}/app-icon.png` },
 };
 
 export const viewport: Viewport = { themeColor: "#7A244F", colorScheme: "light" };

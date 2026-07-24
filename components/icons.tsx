@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type IconProps = { name: string; size?: number; className?: string };
 
 export function Icon({ name, size = 24, className }: IconProps) {
@@ -21,7 +23,9 @@ export function Icon({ name, size = 24, className }: IconProps) {
 export function Logo({ compact = false }: { compact?: boolean }) {
   return (
     <span className="brand" aria-label="Vely">
-      <span className="brand-mark" aria-hidden="true"><Icon name="heart" size={compact ? 17 : 20} /></span>
+      <span className="brand-mark" aria-hidden="true">
+        <Image src="/brand-mark.png" alt="" width={compact ? 20 : 24} height={compact ? 20 : 24} />
+      </span>
       <span>Vely</span>
     </span>
   );

@@ -1,2 +1,17 @@
 import Link from "next/link";
-export default function NotFound() { return <main id="main-content" className="not-found shell"><span className="eyebrow">404</span><h1>This connection went missing.</h1><p>The page may have moved, but there is plenty more to discover.</p><div><Link className="button" href="/">Back home</Link><Link className="button button--ghost" href="/support">Get support</Link></div></main>; }
+import Image from "next/image";
+
+export default function NotFound() {
+  return (
+    <main id="main-content" className="not-found shell">
+      <Image className="not-found-mark" src="/brand-mark.png" alt="" width={70} height={70} />
+      <span className="eyebrow">404</span>
+      <h1>This connection went missing.</h1>
+      <p>The page may have moved, but there is plenty more to discover.</p>
+      <div>
+        <Link className="button" href="/">Back home</Link>
+        <Link className="button button--ghost" href="/support">Get support</Link>
+      </div>
+    </main>
+  );
+}

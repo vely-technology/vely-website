@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Icon } from "./icons";
 
 export function PhoneShowcase({ variant = "discover" }: { variant?: "discover" | "chat" | "profile" }) {
@@ -5,7 +6,10 @@ export function PhoneShowcase({ variant = "discover" }: { variant?: "discover" |
     <div className={`phone phone--${variant}`} aria-label={`Illustration of Vely's ${variant} screen`} role="img">
       <div className="phone-speaker" />
       <div className="phone-screen">
-        <div className="app-top"><span className="mini-logo">Vely</span><span className="avatar-dot">V</span></div>
+        <div className="app-top">
+          <span className="mini-logo"><Image src="/brand-mark.png" alt="" width={18} height={18} />Vely</span>
+          <span className="avatar-dot"><Image src="/brand-mark.png" alt="" width={15} height={15} /></span>
+        </div>
         {variant === "discover" && <DiscoverScreen />}
         {variant === "chat" && <ChatScreen />}
         {variant === "profile" && <ProfileScreen />}
