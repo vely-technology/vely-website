@@ -4,6 +4,7 @@ import { Icon } from "@/components/icons";
 import { PageHero } from "@/components/page-hero";
 import { SITE_URL, SUPPORT_EMAIL } from "@/lib/site";
 import { TrackedEmail } from "@/components/tracked-link";
+import { SupportContactForm } from "@/components/support-contact-form";
 
 export const metadata: Metadata = { title: "Support", description: "Get help with your Vely account, OTP, profile, discovery, matches, subscriptions, safety, and account deletion.", alternates: { canonical: `${SITE_URL}/support` } };
 
@@ -17,5 +18,35 @@ const topics = [
 ];
 
 export default function SupportPage() {
-  return <main id="main-content"><PageHero eyebrow="VELY SUPPORT" title="How can we help?" description="Find quick answers for the most common account, discovery, safety, and subscription questions."/><section className="section"><div className="shell support-grid">{topics.map(([title,text], index) => <article className="support-topic" key={title}><span>0{index + 1}</span><h2>{title}</h2><p>{text}</p>{title === "Privacy and deletion" && <Link href="/delete-account">Account deletion steps <Icon name="arrow" size={16}/></Link>}</article>)}</div></section><section className="section section--tinted"><div className="shell contact-card"><div className="contact-icon"><Icon name="mail" size={32}/></div><div><span className="eyebrow">STILL NEED HELP?</span><h2>Talk to Vely support.</h2><p>Email us from the address linked to your Vely account. Do not include your password, OTP, payment card details, or identity documents.</p><TrackedEmail className="button" email={SUPPORT_EMAIL} subject="Vely Support Request">Email {SUPPORT_EMAIL}</TrackedEmail></div></div></section></main>;
+  return (
+    <main id="main-content">
+      <PageHero eyebrow="VELY SUPPORT" title="How can we help?" description="Find quick answers for the most common account, discovery, safety, and subscription questions."/>
+      <section className="section">
+        <div className="shell support-grid">
+          {topics.map(([title,text], index) => (
+            <article className="support-topic" key={title}>
+              <span>0{index + 1}</span>
+              <h2>{title}</h2>
+              <p>{text}</p>
+              {title === "Privacy and deletion" && (
+                <Link href="/delete-account">Account deletion steps <Icon name="arrow" size={16}/></Link>
+              )}
+            </article>
+          ))}
+        </div>
+      </section>
+      <section className="section section--tinted">
+        <div className="shell contact-card">
+          <div className="contact-icon"><Icon name="mail" size={32}/></div>
+          <div>
+            <span className="eyebrow">STILL NEED HELP?</span>
+            <h2>Contact Vely support.</h2>
+            <p>Send your request here. We store it securely for review and do not use email forwarding, so auth email quota stays dedicated to OTP and system messages.</p>
+            <SupportContactForm />
+            <p className="support-fallback">If the form is unavailable, email <TrackedEmail email={SUPPORT_EMAIL} subject="Vely Support Request">{SUPPORT_EMAIL}</TrackedEmail>.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
 }
