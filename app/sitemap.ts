@@ -18,7 +18,6 @@ const staticRoutes = [
 const seoRoutes = [
   "/dating-app-for-couples",
   "/dating-app-for-singles-in-india",
-  "/best-dating-app-in-pune",
   "/safe-dating-app-in-india",
 ];
 
