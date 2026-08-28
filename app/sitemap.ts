@@ -19,6 +19,9 @@ const seoRoutes = [
   "/dating-app-for-couples",
   "/dating-app-for-singles-in-india",
   "/safe-dating-app-in-india",
+  "/dating-app-in-thailand",
+  "/dating-app-in-bangkok",
+  "/dating-app-in-pattaya",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

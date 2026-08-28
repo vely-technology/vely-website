@@ -5,7 +5,7 @@ import { TrackedEmail } from "./tracked-link";
 
 const groups = [
   { title: "Explore", links: [["Features", "/#features"], ["About", "/about"], ["Safety", "/safety"], ["Support", "/support"]] },
-  { title: "Discover Vely", links: [["Dating App for Couples", "/dating-app-for-couples"], ["Dating App for Singles in India", "/dating-app-for-singles-in-india"], ["Safe Dating App in India", "/safe-dating-app-in-india"]] },
+  { title: "Discover Vely", links: [["Dating App for Couples", "/dating-app-for-couples"], ["Dating App for Singles in India", "/dating-app-for-singles-in-india"], ["Safe Dating App in India", "/safe-dating-app-in-india"], ["Dating App in Thailand", "/dating-app-in-thailand"], ["Dating App in Bangkok", "/dating-app-in-bangkok"], ["Dating App in Pattaya", "/dating-app-in-pattaya"]] },
   { title: "Legal", links: [["Privacy", "/privacy"], ["Terms", "/terms"], ["Delete account", "/delete-account"], ["Child safety", "/child-safety"]] },
 ];
 
