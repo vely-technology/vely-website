@@ -22,6 +22,13 @@ const seoRoutes = [
   "/dating-app-in-thailand",
   "/dating-app-in-bangkok",
   "/dating-app-in-pattaya",
+  // New pages
+  "/open-minded-dating-app",
+  "/couples-dating-app",
+  "/dating-app-for-couples-in-us",
+  "/dating-app-for-couples-in-uk",
+  "/singles-and-couples-dating-app",
+  "/dating-app-in-singapore",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

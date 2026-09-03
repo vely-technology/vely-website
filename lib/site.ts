@@ -21,9 +21,34 @@ export const features = [
 ];
 
 export const faqs = [
-  { question: "Who is Vely for?", answer: "Vely is an adults-only social discovery app for singles and couples who want to meet people, build friendships, and explore meaningful social connections." },
-  { question: "Is Vely available on iPhone?", answer: "Vely is currently available on Android through Google Play. An iOS version is planned, but we are not announcing a release date yet." },
-  { question: "How do matches work?", answer: "You can discover profiles and express interest privately. When the interest is mutual, a match is created and both sides can chat." },
-  { question: "Can I report or block someone?", answer: "Yes. Vely includes in-app reporting and blocking tools. Reports are reviewed under our community and safety policies." },
-  { question: "How do I delete my account?", answer: "You can request deletion from the app or by contacting support. Our account deletion page explains the steps and what happens to your information." },
+  {
+    question: "Who is Vely for?",
+    answer:
+      "Vely is an open-minded dating app for singles and couples aged 18+. Whether you're a single looking to meet couples, a couple looking to meet other couples, or anything in between — Vely is built for you.",
+  },
+  {
+    question: "Can couples use Vely together?",
+    answer:
+      "Yes. Vely supports joint couple profiles (M+F, M+M, F+F). Both partners share one profile and discover together.",
+  },
+  {
+    question: "Is Vely available on iPhone?",
+    answer:
+      "Vely is currently available on Android through Google Play. An iOS version is planned.",
+  },
+  {
+    question: "How do matches work?",
+    answer:
+      "You discover profiles and express interest privately. A match is created only when both sides are interested — then you can chat.",
+  },
+  {
+    question: "Is Vely free?",
+    answer:
+      "Yes, Vely is free to download. Core features including discovery, matching, and messaging are free. Vely Premium unlocks unlimited likes, see who liked you, and priority matching.",
+  },
+  {
+    question: "Can I report or block someone?",
+    answer:
+      "Yes. Vely includes in-app reporting and blocking tools reviewed under our community and safety policies.",
+  },
 ];
