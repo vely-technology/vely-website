@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { LegalPage } from "@/components/legal-page";
 import { SITE_URL, SUPPORT_EMAIL } from "@/lib/site";
 
-export const metadata: Metadata = { title: "Child Safety Standards", description: "Vely's standards for preventing underage access and child sexual abuse and exploitation.", alternates: { canonical: `${SITE_URL}/child-safety` } };
+export const metadata: Metadata = { title: "Child Safety Standards", description: "Vely's standards for preventing underage access and child sexual abuse and exploitation.", alternates: { canonical: `${SITE_URL}/child-safety/` } };
 
 export default function ChildSafetyPage() {
   return <main id="main-content"><LegalPage title="Child Safety Standards" description="Vely is an adults-only platform with zero tolerance for child sexual abuse and exploitation.">
@@ -16,3 +16,4 @@ export default function ChildSafetyPage() {
     <h2>7. Contact</h2><p>Send child-safety concerns to <a href={`mailto:${SUPPORT_EMAIL}?subject=URGENT%20Child%20Safety%20Report`}>{SUPPORT_EMAIL}</a>. Include the relevant Vely profile identifier and nature of the concern. Do not transmit illegal content.</p>
   </LegalPage></main>;
 }
+

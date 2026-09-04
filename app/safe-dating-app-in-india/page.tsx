@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { SeoPage, type SeoPageConfig } from "@/components/seo-page";
 import { SITE_URL } from "@/lib/site";
 
@@ -14,12 +14,12 @@ export const metadata: Metadata = {
     "safe online dating India",
     "Vely safe",
   ],
-  alternates: { canonical: `${SITE_URL}/safe-dating-app-in-india` },
+  alternates: { canonical: `${SITE_URL}/safe-dating-app-in-india/` },
   openGraph: {
     title: "Safe Dating App in India | Vely",
     description:
       "Vely is designed for safety from the ground up — mutual matching, verification, blocking, and adult-only community rules. Free on Android.",
-    url: `${SITE_URL}/safe-dating-app-in-india`,
+    url: `${SITE_URL}/safe-dating-app-in-india/`,
   },
 };
 
@@ -100,3 +100,4 @@ const config: SeoPageConfig = {
 export default function SafeDatingAppInIndiaPage() {
   return <SeoPage config={config} />;
 }
+

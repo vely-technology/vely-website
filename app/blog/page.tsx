@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllPosts, formatDate, type PostCategory } from "@/lib/blog";
 import { Icon } from "@/components/icons";
@@ -8,11 +8,11 @@ export const metadata: Metadata = {
   title: "Blog — Dating Tips, Safety Guides & City Stories",
   description:
     "Advice, guides, and stories for singles and couples — from safety tips to city date ideas. The Vely blog covers connection, safety, and social discovery in India and beyond.",
-  alternates: { canonical: `${SITE_URL}/blog` },
+  alternates: { canonical: `${SITE_URL}/blog/` },
   openGraph: {
     title: "Vely Blog — Tips for Singles & Couples",
     description: "Dating tips, safety guides, city stories, and more from the team behind Vely.",
-    url: `${SITE_URL}/blog`,
+    url: `${SITE_URL}/blog/`,
   },
 };
 
@@ -34,7 +34,7 @@ export default function BlogIndexPage() {
     "@type": "Blog",
     name: "Vely Blog",
     description: "Dating tips, safety guides, and city stories from the Vely team.",
-    url: `${SITE_URL}/blog`,
+    url: `${SITE_URL}/blog/`,
     blogPost: posts.map((p) => ({
       "@type": "BlogPosting",
       headline: p.title,
@@ -132,3 +132,4 @@ export default function BlogIndexPage() {
     </main>
   );
 }
+

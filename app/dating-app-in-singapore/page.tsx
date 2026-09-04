@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { SeoPage, type SeoPageConfig } from "@/components/seo-page";
 import { SITE_URL } from "@/lib/site";
 
@@ -15,12 +15,12 @@ export const metadata: Metadata = {
     "singles Singapore app",
     "Vely Singapore",
   ],
-  alternates: { canonical: `${SITE_URL}/dating-app-in-singapore` },
+  alternates: { canonical: `${SITE_URL}/dating-app-in-singapore/` },
   openGraph: {
     title: "Dating App in Singapore | Vely",
     description:
       "Meet singles and couples in Singapore with Vely. GPS matching, mutual likes, verified profiles. Free on Android.",
-    url: `${SITE_URL}/dating-app-in-singapore`,
+    url: `${SITE_URL}/dating-app-in-singapore/`,
   },
 };
 
@@ -101,3 +101,4 @@ const config: SeoPageConfig = {
 export default function DatingAppInSingaporePage() {
   return <SeoPage config={config} />;
 }
+

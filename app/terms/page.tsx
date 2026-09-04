@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { LegalPage } from "@/components/legal-page";
 import { SITE_URL, SUPPORT_EMAIL } from "@/lib/site";
 
-export const metadata: Metadata = { title: "Terms of Service", description: "The rules and conditions for accessing and using Vely.", alternates: { canonical: `${SITE_URL}/terms` } };
+export const metadata: Metadata = { title: "Terms of Service", description: "The rules and conditions for accessing and using Vely.", alternates: { canonical: `${SITE_URL}/terms/` } };
 
 export default function TermsPage() {
   return <main id="main-content"><LegalPage title="Terms of Service" description="These terms govern access to and use of the Vely mobile application and related services.">
@@ -23,3 +23,4 @@ export default function TermsPage() {
     <h2>13. Contact</h2><p>Questions about these Terms can be sent to <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>.</p>
   </LegalPage></main>;
 }
+

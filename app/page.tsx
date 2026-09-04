@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { Icon } from "@/components/icons";
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Vely – Open-Minded Dating App for Singles & Couples",
   description:
     "Vely is the open-minded dating app for singles and couples. GPS matching, verified profiles, mutual likes only. Meet people nearby. Free on Android.",
-  alternates: { canonical: "https://joinvely.com" },
+  alternates: { canonical: "https://joinvely.com/" },
   openGraph: {
     title: "Vely – Open-Minded Dating for Singles & Couples",
     description:
@@ -253,3 +253,4 @@ export default function HomePage() {
     </main>
   );
 }
+

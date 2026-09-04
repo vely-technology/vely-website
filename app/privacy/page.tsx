@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { LegalPage } from "@/components/legal-page";
 import { SITE_URL, SUPPORT_EMAIL } from "@/lib/site";
 
-export const metadata: Metadata = { title: "Privacy Policy", description: "How Vely collects, uses, shares, protects, and deletes personal information.", alternates: { canonical: `${SITE_URL}/privacy` } };
+export const metadata: Metadata = { title: "Privacy Policy", description: "How Vely collects, uses, shares, protects, and deletes personal information.", alternates: { canonical: `${SITE_URL}/privacy/` } };
 
 export default function PrivacyPage() {
   return <main id="main-content"><LegalPage title="Privacy Policy" description="This policy explains the information Vely handles, why we use it, and the choices available to you.">
@@ -22,3 +22,4 @@ export default function PrivacyPage() {
     <h2>12. Changes and contact</h2><p>We may update this policy as Vely changes. Material changes will be communicated where required, and the date above will be updated. Questions or privacy requests can be sent to <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>.</p>
   </LegalPage></main>;
 }
+
