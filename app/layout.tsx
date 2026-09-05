@@ -8,12 +8,12 @@ import "./globals.css";
 import { Footer } from "@/components/footer";
 import { GoogleAnalytics } from "@/components/google-analytics";
 import { Header } from "@/components/header";
-import { GA_MEASUREMENT_ID, SITE_URL } from "@/lib/site";
+import { GA_MEASUREMENT_ID, PLAY_STORE_URL, SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Vely – Open-Minded Dating App for Singles & Couples",
+    default: "Vely App - Open-Minded Dating for Singles & Couples",
     template: "%s | Vely",
   },
   description:
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "Vely",
-    title: "Vely – Open-Minded Dating for Singles & Couples",
+    title: "Vely App - Open-Minded Dating for Singles & Couples",
     description:
       "GPS-based dating for singles and couples. Mutual matching, verified profiles, all orientations welcome. Free on Android.",
     url: SITE_URL,
@@ -43,13 +43,13 @@ export const metadata: Metadata = {
         url: `${SITE_URL}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: "Vely – Open-Minded Dating for Singles & Couples",
+        alt: "Vely App - Open-Minded Dating for Singles & Couples",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vely – Open-Minded Dating for Singles & Couples",
+    title: "Vely App - Open-Minded Dating for Singles & Couples",
     description:
       "GPS dating for singles and couples. Mutual matching. Free on Android.",
     images: [`${SITE_URL}/og-image.png`],
@@ -67,12 +67,15 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     "@context": "https://schema.org",
     "@type": "MobileApplication",
     name: "Vely",
+    alternateName: ["Vely app", "Join Vely"],
     description:
       "Open-minded dating app for singles and couples. GPS-based matching, verified profiles, mutual matching only. All orientations welcome.",
     operatingSystem: "Android",
     applicationCategory: "SocialNetworkingApplication",
     url: SITE_URL,
-    downloadUrl: "https://play.google.com/store/apps/details?id=com.vely.app",
+    downloadUrl: PLAY_STORE_URL,
+    installUrl: PLAY_STORE_URL,
+    sameAs: [PLAY_STORE_URL],
     offers: {
       "@type": "Offer",
       price: "0",

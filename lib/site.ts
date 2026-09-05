@@ -7,6 +7,7 @@ export const SUPPORT_EMAIL = "hello@joinvely.com";
 
 export const navigation = [
   { href: "/#features", label: "Features" },
+  { href: "/vely-app", label: "Vely App" },
   { href: "/blog", label: "Blog" },
   { href: "/safety", label: "Safety" },
   { href: "/about", label: "About" },

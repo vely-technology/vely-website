@@ -6,7 +6,12 @@ import { SITE_URL, SUPPORT_EMAIL } from "@/lib/site";
 import { TrackedEmail } from "@/components/tracked-link";
 import { SupportContactForm } from "@/components/support-contact-form";
 
-export const metadata: Metadata = { title: "Support", description: "Get help with your Vely account, OTP, profile, discovery, matches, subscriptions, safety, and account deletion.", alternates: { canonical: `${SITE_URL}/support/` } };
+export const metadata: Metadata = {
+  title: "Vely App Support - Account, Login, Billing & Deletion Help",
+  description:
+    "Get help with the Vely app, including account login, OTP codes, profile setup, discovery, matches, subscriptions, safety, and account deletion.",
+  alternates: { canonical: `${SITE_URL}/support/` },
+};
 
 const topics = [
   ["Account and login", "Vely sends a one-time code to your email. Check spam, confirm the email address, and wait before requesting another code. Never share an OTP with anyone."],
@@ -20,7 +25,7 @@ const topics = [
 export default function SupportPage() {
   return (
     <main id="main-content">
-      <PageHero eyebrow="VELY SUPPORT" title="How can we help?" description="Find quick answers for the most common account, discovery, safety, and subscription questions."/>
+      <PageHero eyebrow="VELY APP SUPPORT" title="Help with your Vely account." description="Find quick answers for Vely app login, OTP, profile, discovery, safety, subscription, and account deletion questions."/>
       <section className="section">
         <div className="shell support-grid">
           {topics.map(([title,text], index) => (

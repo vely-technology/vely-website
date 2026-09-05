@@ -51,6 +51,29 @@ const config: SeoPageConfig = {
       text: "Verification signals, in-app reporting, and clear community rules make Vely a safer space than most apps on the market.",
     },
   ],
+  contentSections: [
+    {
+      heading: "A dating app for Indian singles who want relevant matches",
+      paragraphs: [
+        "Dating in India is not the same in every city or social circle. Some singles are looking for a serious relationship, some want to meet new people after moving to a new city, and some want open-minded connections without explaining themselves repeatedly. A useful dating app for singles in India needs to support those different goals while still making discovery simple.",
+        "Vely focuses on nearby discovery and mutual matching. You can create a profile that explains who you are, set preferences for the kind of people you want to discover, and browse at your own pace. This makes the app useful whether you are in Pune, Mumbai, Delhi, Bangalore, Hyderabad, Chennai, or a smaller Indian city where meeting compatible people offline can be difficult.",
+      ],
+    },
+    {
+      heading: "Why singles need more than endless swiping",
+      paragraphs: [
+        "Many singles download dating apps, use them for a week, and then stop because the experience feels repetitive. Endless swiping creates activity, but it does not always create better conversations. What matters is whether profiles are relevant, whether people can express interest clearly, and whether conversations start from two-way intent.",
+        "Vely uses mutual matching so you are not pushed into conversations that do not make sense. Likes stay private until both sides show interest. That keeps the app calmer and helps singles focus on people they actually want to meet. For introverts, busy professionals, and people new to online dating, this can make a major difference.",
+      ],
+    },
+    {
+      heading: "Meet people, find a partner, or build something slowly",
+      paragraphs: [
+        "Searches like dating app for singles, find partner, meet new people, and relationship app often come from the same need: people want connection, but they want it to feel natural. Vely is built for social discovery first, so a match can become a friendship, a date, a serious relationship, or another kind of open-minded connection depending on what both people want.",
+        "The best results come from being specific. Add photos that show your face clearly, write a profile that gives someone a reason to message you, and use preferences honestly. A better profile attracts better matches because it reduces guesswork before the first conversation begins.",
+      ],
+    },
+  ],
   steps: [
     {
       title: "Build your profile",

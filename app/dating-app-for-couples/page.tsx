@@ -51,6 +51,29 @@ const config: SeoPageConfig = {
       text: "Both sides express interest privately. A conversation only opens when the feeling is mutual — no unsolicited messages.",
     },
   ],
+  contentSections: [
+    {
+      heading: "Why couples need a dating app built for two people",
+      paragraphs: [
+        "Most dating apps are designed around one person, one profile, and one inbox. That structure can feel awkward for couples who want to meet other couples or explore social discovery together. A couples dating app needs to treat the relationship as part of the profile, not as a detail hidden in a bio.",
+        "Vely supports joint couple profiles so both partners can present themselves clearly from the beginning. This helps reduce confusion, makes expectations easier to understand, and creates a better experience for other users too. When a couple is visible as a couple, matches can decide honestly whether that connection is right for them.",
+      ],
+    },
+    {
+      heading: "Couple discovery should be clear, mutual, and respectful",
+      paragraphs: [
+        "Couples often want more control over who they meet. Some want couple friends, some want open-minded dating, some want to meet singles, and some want to discover other couples nearby. The key is clarity. Vely lets couples use preferences and mutual matching so conversations start only when both sides are interested.",
+        "That mutual model matters because couples dating can involve more boundaries than ordinary one-to-one dating. A conversation should not begin with pressure or assumptions. On Vely, interest is private until there is a match. That makes it easier for couples to explore without unwanted messages or awkward explanations.",
+      ],
+    },
+    {
+      heading: "How to make a better couple profile",
+      paragraphs: [
+        "A strong couple profile should show both people, explain the kind of connection you are open to, and include a few interests that make conversation easier. Photos should be clear and recent. The bio should avoid vague lines and instead say something specific, such as enjoying weekend cafes, travel, live music, fitness, board games, or new friendships.",
+        "Good couple profiles are honest about boundaries. You do not need to share private details, but you should make it clear what kind of people you want to meet and what pace feels comfortable. Vely gives couples the structure to do that through a joint profile, discovery preferences, and mutual matching.",
+      ],
+    },
+  ],
   steps: [
     {
       title: "Create your couple profile",

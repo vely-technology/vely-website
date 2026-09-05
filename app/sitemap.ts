@@ -16,9 +16,13 @@ const staticRoutes = [
 ];
 
 const seoRoutes = [
+  "/vely-app",
+  "/best-dating-app-in-india",
   "/dating-app-for-couples",
   "/dating-app-for-singles-in-india",
+  "/safe-dating-app-for-women",
   "/safe-dating-app-in-india",
+  "/dating-tips-for-introverts",
   "/dating-app-in-thailand",
   "/dating-app-in-bangkok",
   "/dating-app-in-pattaya",

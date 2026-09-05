@@ -26,6 +26,8 @@ export interface SeoPageConfig {
   benefits: { icon: string; title: string; text: string }[];
   /** How-it-works steps (3) */
   steps: { title: string; text: string }[];
+  /** Optional long-form SEO copy blocks */
+  contentSections?: { heading: string; paragraphs: string[] }[];
   /** FAQ items */
   faqs: { question: string; answer: string }[];
   /** Final CTA heading */
@@ -36,7 +38,7 @@ export interface SeoPageConfig {
 
 export function SeoPage({ config }: { config: SeoPageConfig }) {
   const { slug, eyebrow, heroHeading, heroHighlight, heroSubtitle, statValue, statLabel,
-    whyHeading, benefits, steps, faqs, ctaHeading, ctaText, breadcrumb } = config;
+    whyHeading, benefits, steps, contentSections = [], faqs, ctaHeading, ctaText, breadcrumb } = config;
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -105,6 +107,21 @@ export function SeoPage({ config }: { config: SeoPageConfig }) {
           </div>
         </div>
       </section>
+
+      {contentSections.length > 0 && (
+        <section className="section">
+          <div className="shell narrow prose">
+            {contentSections.map((section) => (
+              <section key={section.heading}>
+                <h2>{section.heading}</h2>
+                {section.paragraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </section>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* ── How it works ─────────────────────────────────────────── */}
       <section className="section section--tinted">

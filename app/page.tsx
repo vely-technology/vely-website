@@ -7,12 +7,12 @@ import { PhoneShowcase } from "@/components/phone-showcase";
 import { faqs, features } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Vely – Open-Minded Dating App for Singles & Couples",
+  title: "Vely App - Open-Minded Dating App for Singles & Couples",
   description:
-    "Vely is the open-minded dating app for singles and couples. GPS matching, verified profiles, mutual likes only. Meet people nearby. Free on Android.",
+    "Download the Vely app for open-minded dating. Singles and couples can meet nearby with GPS matching, verified profiles, and mutual likes. Free on Android.",
   alternates: { canonical: "https://joinvely.com/" },
   openGraph: {
-    title: "Vely – Open-Minded Dating for Singles & Couples",
+    title: "Vely App - Open-Minded Dating for Singles & Couples",
     description:
       "GPS dating for singles and couples. Mutual matching. Verified profiles. All orientations welcome. Free on Android.",
     url: "https://joinvely.com",
@@ -39,13 +39,13 @@ export default function HomePage() {
           <div className="hero-copy">
             <span className="eyebrow hero-brand-eyebrow">
               <Image src="/brand-mark.png" alt="" width={18} height={18} />
-              Social discovery, made more human
+              Download Vely on Google Play
             </span>
             <h1>
-              Open-minded dating for <em>singles and couples.</em>
+              Vely app for <em>open-minded singles and couples.</em>
             </h1>
             <p>
-              Vely is the GPS-based dating app for singles and couples exploring
+              Download Vely, the GPS-based dating app for singles and couples exploring
               open-minded connections. Mutual matching, verified profiles,
               all orientations welcome.
             </p>
