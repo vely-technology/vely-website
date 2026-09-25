@@ -30,9 +30,19 @@ const seoRoutes = [
   "/open-minded-dating-app",
   "/couples-dating-app",
   "/dating-app-for-couples-in-us",
+  "/dating-app-for-singles-in-us",
   "/dating-app-for-couples-in-uk",
+  "/dating-app-for-singles-in-uk",
+  "/dating-app-for-couples-in-canada",
+  "/dating-app-for-singles-in-canada",
   "/singles-and-couples-dating-app",
   "/dating-app-in-singapore",
+  "/dating-app-for-couples-in-australia",
+  "/dating-app-for-singles-in-australia",
+  "/dating-app-for-couples-in-philippines",
+  "/dating-app-for-singles-in-philippines",
+  "/dating-app-for-couples-in-ghana",
+  "/dating-app-for-singles-in-ghana",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

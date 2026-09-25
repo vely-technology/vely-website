@@ -12,6 +12,12 @@ export const navigation = [
   { href: "/safety", label: "Safety" },
   { href: "/about", label: "About" },
   { href: "/support", label: "Support" },
+  { href: "/dating-app-for-couples-in-us", label: "US Couples" },
+  { href: "/dating-app-for-singles-in-us", label: "US Singles" },
+  { href: "/dating-app-for-couples-in-uk", label: "UK Couples" },
+  { href: "/dating-app-for-singles-in-uk", label: "UK Singles" },
+  { href: "/dating-app-for-couples-in-canada", label: "Canada Couples" },
+  { href: "/dating-app-for-singles-in-canada", label: "Canada Singles" },
 ];
 
 export const features = [
