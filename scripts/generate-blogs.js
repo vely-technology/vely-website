@@ -107,8 +107,8 @@ const posts = [
   {slug:'international-dating-trends',title:'International Dating Trends: Cross-Border Connections',desc:'Growth of international matching and long-distance dynamics.',cat:'Trends',tags:['international','cross-border','long distance']},
 ];
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
 posts.forEach(p => {
   const tags = p.tags.map(t => '"' + t + '"').join(', ');
