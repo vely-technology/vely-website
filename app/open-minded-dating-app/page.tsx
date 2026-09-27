@@ -11,7 +11,10 @@ export const metadata: Metadata = {
     "open relationship app",
     "couples and singles dating",
     "ethical non monogamy app",
+    "ethical non-monogamy dating app",
     "ENM dating app",
+    "open relationship dating app",
+    "dating app for non-monogamous singles",
     "open minded singles",
     "couples dating app",
   ],
@@ -31,7 +34,7 @@ const config: SeoPageConfig = {
   heroHeading: "Dating without labels.",
   heroHighlight: "Open-minded connections for everyone.",
   heroSubtitle:
-    "Vely is the open-minded dating app where singles, couples, and everyone in between can discover genuine connections — no judgment, no labels required.",
+    "Vely is an open-minded dating app where singles, couples, and everyone in between can discover genuine connections — no judgment, no labels required.",
   statValue: "5",
   statLabel: "Profile types — single, M+F, M+M, F+F & more",
   whyHeading: "Built for open-minded people who know what they want.",
@@ -66,7 +69,21 @@ const config: SeoPageConfig = {
       text: "When interest is mutual, the conversation opens. Move at your own pace — coffee, friends, or something more.",
     },
   ],
+  contentSections: [
+    {
+      heading: "An ethical non-monogamy dating app for singles and couples",
+      paragraphs: [
+        "Vely gives people exploring ethical non-monogamy a clear way to describe who they are and what kind of connection they want. Singles can meet couples, couples can meet other couples, and everyone can use discovery preferences to make their boundaries and intentions clearer.",
+        "Open-minded dating still works best when it is honest and mutual. Vely keeps likes private until both sides are interested, so a conversation starts with shared intent instead of pressure or assumptions.",
+      ],
+    },
+  ],
   faqs: [
+    {
+      question: "What is ethical non-monogamy dating?",
+      answer:
+        "Ethical non-monogamy means that everyone involved understands and consents to the relationship structure. Vely supports open-minded singles and couples who want to explain their preferences clearly and connect mutually.",
+    },
     {
       question: "Is Vely for people in open relationships?",
       answer:

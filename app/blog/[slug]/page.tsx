@@ -104,7 +104,9 @@ export default async function BlogPostPage({
             <span>{post.category}</span>
           </nav>
 
-          <span className="post-category-badge">{post.category}</span>
+          <Link className="post-category-badge" href={`/blog/#${post.category.toLowerCase().replace(/\s+/g, "-")}`}>
+            {post.category}
+          </Link>
 
           <h1>{post.title}</h1>
 
@@ -138,6 +140,12 @@ export default async function BlogPostPage({
             </div>
             <StoreButton location={`blog_inline_${post.slug}`} compact />
           </aside>
+          <nav className="post-topic-links" aria-label="Explore related Vely topics">
+            <strong>Explore Vely</strong>
+            <Link href="/dating-app-for-couples/">Couples dating</Link>
+            <Link href="/dating-app-for-singles-in-india/">Singles dating</Link>
+            <Link href="/safety/">Dating safety</Link>
+          </nav>
         </article>
 
         {/* Sidebar */}

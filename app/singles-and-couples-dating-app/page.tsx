@@ -10,6 +10,8 @@ export const metadata: Metadata = {
     "singles and couples dating app",
     "dating app for singles and couples",
     "single meet couples app",
+    "dating app for singles to meet couples",
+    "singles looking for couples",
     "couple friendly app",
     "meet couples as a single",
     "open minded singles app",
@@ -31,7 +33,7 @@ const config: SeoPageConfig = {
   heroHeading: "The dating app for",
   heroHighlight: "singles and couples.",
   heroSubtitle:
-    "Vely is the only dating app built for both singles and couples in one place. Singles can meet couples. Couples can meet couples. Everyone connects on their own terms.",
+    "Vely is a dating app built for both singles and couples in one place. Singles can meet couples. Couples can meet couples. Everyone connects on their own terms.",
   statValue: "5",
   statLabel: "Profile types — single M/F, couple M+F, M+M, F+F",
   whyHeading: "One app. Every connection type.",

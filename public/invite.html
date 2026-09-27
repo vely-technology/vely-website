@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,follow">
+  <title>Join Vely</title>
+  <style>body{font-family:Arial,sans-serif;max-width:680px;margin:15vh auto;padding:24px;color:#24151d}a{display:inline-block;margin:10px 10px 10px 0;padding:14px 20px;background:#7a244f;color:#fff;text-decoration:none;border-radius:6px}code{font-weight:bold}</style>
+</head>
+<body>
+  <p>YOU&apos;RE INVITED</p>
+  <h1>Meet people who get you.</h1>
+  <p>Join Vely for open-minded discovery for singles and couples.</p>
+  <p id="codeLine" hidden>Your invite code <code id="code"></code> will be saved when Vely opens.</p>
+  <a id="open" href="vely://invite">Open Vely</a>
+  <a id="play" href="https://play.google.com/store/apps/details?id=com.vely.app&amp;referrer=source%3Dinvite">Get Vely on Google Play</a>
+  <p>New here? Download Vely and enter the invite code during signup if the app does not open automatically.</p>
+  <script>
+    const code = new URLSearchParams(location.search).get('ref');
+    if (code) {
+      const value = code.trim().toUpperCase();
+      document.getElementById('code').textContent = value;
+      document.getElementById('codeLine').hidden = false;
+      document.getElementById('open').href = 'vely://invite?ref=' + encodeURIComponent(value);
+      document.getElementById('play').href = 'https://play.google.com/store/apps/details?id=com.vely.app&referrer=' + encodeURIComponent('source=invite&referral_code=' + value);
+    }
+  </script>
+</body>
+</html>

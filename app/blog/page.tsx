@@ -1,8 +1,9 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
-import { getAllPosts, formatDate, type PostCategory } from "@/lib/blog";
+import { getAllPosts, type PostCategory } from "@/lib/blog";
 import { Icon } from "@/components/icons";
 import { SITE_URL } from "@/lib/site";
+import { BlogBrowser } from "@/components/blog-browser";
 
 export const metadata: Metadata = {
   title: "Blog — Dating Tips, Safety Guides & City Stories",
@@ -62,48 +63,7 @@ export default function BlogIndexPage() {
       {/* ── Category strips ── */}
       <section className="section">
         <div className="shell">
-          {/* Category pills */}
-          <div className="blog-category-strip">
-            {CATEGORIES.map((cat) => (
-              <span key={cat} className="blog-category-pill">
-                {cat}
-              </span>
-            ))}
-          </div>
-
-          {/* Post grid */}
-          {posts.length === 0 ? (
-            <p className="blog-empty">No posts yet — check back soon.</p>
-          ) : (
-            <div className="blog-grid">
-              {posts.map((post, i) => (
-                <article
-                  key={post.slug}
-                  className={`blog-card${i === 0 ? " blog-card--featured" : ""}`}
-                >
-                  <div className="blog-card-cover" aria-hidden="true">
-                    <div className="blog-card-cover-inner">
-                      <span className="blog-card-category">{post.category}</span>
-                    </div>
-                  </div>
-                  <div className="blog-card-body">
-                    <div className="blog-card-meta">
-                      <span>{formatDate(post.publishedAt)}</span>
-                      <span>·</span>
-                      <span>{post.readingTime} min read</span>
-                    </div>
-                    <h2 className="blog-card-title">
-                      <Link href={`/blog/${post.slug}`}>{post.title}</Link>
-                    </h2>
-                    <p className="blog-card-desc">{post.description}</p>
-                    <Link className="text-link blog-card-link" href={`/blog/${post.slug}`}>
-                      Read article <Icon name="arrow" size={16} />
-                    </Link>
-                  </div>
-                </article>
-              ))}
-            </div>
-          )}
+          <BlogBrowser posts={posts} />
         </div>
       </section>
 
@@ -116,11 +76,20 @@ export default function BlogIndexPage() {
           </div>
           <div className="blog-topics-grid">
             {CATEGORIES.map((cat) => (
-              <div key={cat} className="blog-topic-card">
+              <div key={cat} id={cat.toLowerCase().replace(/\s+/g, "-")} className="blog-topic-card">
                 <strong>{cat}</strong>
                 <p>{CATEGORY_DESCRIPTIONS[cat]}</p>
               </div>
             ))}
+          </div>
+          <div className="blog-discovery-links">
+            <span className="eyebrow">EXPLORE VELY</span>
+            <div className="inline-actions">
+              <Link className="text-link" href="/dating-app-for-couples/">Dating app for couples <Icon name="arrow" size={16} /></Link>
+              <Link className="text-link" href="/dating-app-for-singles-in-india/">Dating app for singles <Icon name="arrow" size={16} /></Link>
+              <Link className="text-link" href="/open-minded-dating-app/">Open-minded dating <Icon name="arrow" size={16} /></Link>
+              <Link className="text-link" href="/safe-dating-app-for-women/">Safe dating <Icon name="arrow" size={16} /></Link>
+            </div>
           </div>
         </div>
       </section>

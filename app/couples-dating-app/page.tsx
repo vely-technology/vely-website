@@ -10,9 +10,12 @@ export const metadata: Metadata = {
     "couples dating app",
     "couple app",
     "app for couples to meet couples",
+    "dating app for couples to meet other couples",
     "dating app for couples",
     "couples social app",
     "meet other couples",
+    "meet couples near me",
+    "couples looking for couples",
     "swinger app",
     "couples match app",
   ],
@@ -32,7 +35,7 @@ const config: SeoPageConfig = {
   heroHeading: "The dating app where",
   heroHighlight: "couples meet couples.",
   heroSubtitle:
-    "Vely is the only dating app designed for couples — M+F, M+M, F+F all welcome. Create a joint couple profile, discover other couples nearby, and connect when the interest is mutual.",
+    "Vely is a dating app designed for couples — M+F, M+M, F+F all welcome. Create a joint couple profile, discover other couples nearby, and connect when the interest is mutual.",
   statValue: "3",
   statLabel: "Couple profile types supported",
   whyHeading: "Why couples choose Vely over mainstream dating apps.",
@@ -68,6 +71,11 @@ const config: SeoPageConfig = {
     },
   ],
   faqs: [
+    {
+      question: "How can couples meet other couples safely?",
+      answer:
+        "Start with a clear joint profile, keep early conversations in the app, use mutual matching, avoid sharing private information too quickly, and meet in a public place when both couples feel comfortable.",
+    },
     {
       question: "What couple types does Vely support?",
       answer:
