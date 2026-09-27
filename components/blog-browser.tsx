@@ -3,7 +3,25 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { Icon } from "@/components/icons";
-import { formatDate, type PostCategory, type PostMeta } from "@/lib/blog";
+
+type PostCategory = "Couples" | "Singles" | "Safety" | "City Guides" | "Tips";
+type PostMeta = {
+  slug: string;
+  title: string;
+  description: string;
+  publishedAt: string;
+  category: PostCategory;
+  tags: string[];
+  readingTime: number;
+};
+
+function formatDate(iso: string): string {
+  return new Date(iso).toLocaleDateString("en-IN", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  });
+}
 
 const categories: Array<"All" | PostCategory> = ["All", "Couples", "Singles", "Safety", "City Guides", "Tips"];
 
