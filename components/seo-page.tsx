@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Icon } from "@/components/icons";
 import { StoreButton, IosBadge } from "@/components/store-button";
+import { PhoneShowcase } from "@/components/phone-showcase";
 import { SITE_URL } from "@/lib/site";
 
 export interface SeoPageConfig {
@@ -124,6 +125,31 @@ export function SeoPage({ config }: { config: SeoPageConfig }) {
       )}
 
       {/* ── How it works ─────────────────────────────────────────── */}
+      <section className="section section--tinted">
+        <div className="shell split">
+          <div className="showcase-stack"><PhoneShowcase variant="discover" /></div>
+          <div className="split-copy">
+            <span className="eyebrow">SEE HOW VELY WORKS</span>
+            <h2>Discover with more intention.</h2>
+            <p>Build a profile that reflects how you connect, browse people who fit your interests, and start conversations only after a mutual match.</p>
+            <ul className="check-list">
+              <li><Icon name="check" size={18} /> Couple and individual profiles</li>
+              <li><Icon name="check" size={18} /> Mutual matching before messaging</li>
+              <li><Icon name="check" size={18} /> Reporting and blocking in the app</li>
+            </ul>
+            <div className="inline-actions"><StoreButton location={`seo_walkthrough_${slug}`} compact /><Link className="text-link" href="/safety">Read safety guidelines <Icon name="arrow" size={18} /></Link></div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section seo-conversion-section">
+        <div className="shell"><div className="section-heading"><span className="eyebrow">WHY START NOW</span><h2>A clearer way to connect.</h2></div><div className="seo-conversion-grid">
+          <article><Icon name="shield" size={28} /><h3>Mutual by design</h3><p>Conversations begin after both sides choose to connect.</p></article>
+          <article><Icon name="heart" size={28} /><h3>Invite and earn</h3><p>Invite 5 people who install and sign up to unlock 1 month of Premium.</p><Link className="text-link" href="/support">See referral help <Icon name="arrow" size={16} /></Link></article>
+          <article><Icon name="spark" size={28} /><h3>Free to start</h3><p>Download Vely and explore the core experience before choosing Premium.</p></article>
+        </div></div>
+      </section>
+
       <section className="section section--tinted">
         <div className="shell seo-steps-wrap">
           <div className="section-heading section-heading--left">
