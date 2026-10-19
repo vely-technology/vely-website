@@ -4,6 +4,13 @@ export const PLAY_STORE_URL =
   "https://play.google.com/store/apps/details?id=com.vely.app&utm_source=website&utm_medium=joinvely&utm_campaign=homepage";
 export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 export const SUPPORT_EMAIL = "hello@joinvely.com";
+export const SOCIAL_LINKS = [
+  { label: "YouTube", href: "https://www.youtube.com/@VelyDating" },
+  { label: "Facebook", href: "https://www.facebook.com/profile.php?id=61593327690050" },
+  { label: "Instagram", href: "https://www.instagram.com/velydating/" },
+  { label: "Rumble", href: "https://rumble.com/user/velydating" },
+  { label: "X", href: "https://x.com/VelyDatingApp" },
+];
 
 export const navigation = [
   { href: "/#features", label: "Features" },

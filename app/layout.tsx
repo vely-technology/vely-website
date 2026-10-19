@@ -8,7 +8,7 @@ import "./globals.css";
 import { Footer } from "@/components/footer";
 import { GoogleAnalytics } from "@/components/google-analytics";
 import { Header } from "@/components/header";
-import { GA_MEASUREMENT_ID, PLAY_STORE_URL, SITE_URL } from "@/lib/site";
+import { GA_MEASUREMENT_ID, PLAY_STORE_URL, SITE_URL, SOCIAL_LINKS } from "@/lib/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -75,7 +75,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     url: SITE_URL,
     downloadUrl: PLAY_STORE_URL,
     installUrl: PLAY_STORE_URL,
-    sameAs: [PLAY_STORE_URL],
+    sameAs: [PLAY_STORE_URL, ...SOCIAL_LINKS.map(({ href }) => href)],
     offers: {
       "@type": "Offer",
       price: "0",
