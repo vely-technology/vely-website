@@ -207,6 +207,21 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="section section--tinted">
+        <div className="shell">
+          <div className="section-heading">
+            <span className="eyebrow">DISCOVER VELY BY LOCATION</span>
+            <h2>Find people near you.</h2>
+            <p>Explore Vely pages for singles and couples in the communities we are growing.</p>
+          </div>
+          <div className="feature-grid">
+            <article className="feature-card"><h3>India</h3><p>Meet singles and couples nearby with mutual matching.</p><Link className="text-link" href="/dating-app-for-singles-in-india/">Singles in India <Icon name="arrow" size={18} /></Link><Link className="text-link" href="/dating-app-for-couples-in-india/">Couples in India <Icon name="arrow" size={18} /></Link></article>
+            <article className="feature-card"><h3>United States</h3><p>Discover open-minded connections in cities across the US.</p><Link className="text-link" href="/dating-app-for-singles-in-us/">Singles in the US <Icon name="arrow" size={18} /></Link><Link className="text-link" href="/dating-app-for-couples-in-us/">Couples in the US <Icon name="arrow" size={18} /></Link></article>
+            <article className="feature-card"><h3>Canada, UK and Australia</h3><p>Browse local dating options for singles and couples.</p><Link className="text-link" href="/dating-app-for-couples-in-canada/">Canada couples <Icon name="arrow" size={18} /></Link><Link className="text-link" href="/dating-app-for-singles-in-uk/">UK singles <Icon name="arrow" size={18} /></Link><Link className="text-link" href="/dating-app-for-singles-in-australia/">Australia singles <Icon name="arrow" size={18} /></Link></article>
+          </div>
+        </div>
+      </section>
+
       <section className="section faq-section">
         <div className="shell faq-grid">
           <div className="section-heading section-heading--left">

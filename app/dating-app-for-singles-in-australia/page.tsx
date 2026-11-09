@@ -3,9 +3,9 @@ import { SeoPage, type SeoPageConfig } from "@/components/seo-page";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Dating App for Singles in Australia — Meet People Nearby | Vely",
+  title: "Dating App Australia for Singles | Meet People Nearby | Vely",
   description:
-    "Looking for a dating app in Australia? Vely helps singles meet nearby singles and couples in Sydney, Melbourne, Brisbane, Perth, and beyond through mutual matching. Free on Android.",
+    "Find singles and couples nearby in Australia with Vely. Discover local connections in Sydney, Melbourne, Brisbane, Perth, and beyond. Free on Android.",
   keywords: [
     "dating app for singles in Australia",
     "singles dating app Australia",
