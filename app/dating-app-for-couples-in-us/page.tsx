@@ -5,7 +5,7 @@ import { SITE_URL } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Dating App for Couples in the US — Meet Other Couples | Vely",
   description:
-    "Vely is the open-minded dating app for couples in the US. Meet other couples nearby in New York, LA, Miami, Chicago and beyond. Free on Android.",
+    "Looking for a dating app for couples in the US? Vely helps couples meet nearby couples and singles through private likes, mutual matching, and real chat. Free on Android.",
   keywords: [
     "dating app for couples in US",
     "couples dating app USA",

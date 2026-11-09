@@ -5,7 +5,7 @@ import { SITE_URL } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Dating App for Singles in Australia — Meet People Nearby | Vely",
   description:
-    "Vely is the open-minded dating app for singles in Australia. Meet singles and couples nearby in Sydney, Melbourne, Brisbane and beyond. Free on Android.",
+    "Looking for a dating app in Australia? Vely helps singles meet nearby singles and couples in Sydney, Melbourne, Brisbane, Perth, and beyond through mutual matching. Free on Android.",
   keywords: [
     "dating app for singles in Australia",
     "singles dating app Australia",

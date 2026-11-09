@@ -4,6 +4,8 @@ import { SITE_URL } from "@/lib/site";
 
 export const dynamic = "force-static";
 
+const SITE_UPDATED_AT = new Date("2026-11-09");
+
 const staticRoutes = [
   "",
   "/about",
@@ -54,14 +56,14 @@ const seoRoutes = [
 export default function sitemap(): MetadataRoute.Sitemap {
   const static_: MetadataRoute.Sitemap = staticRoutes.map((route) => ({
     url: `${SITE_URL}${route === "" ? "/" : route + "/"}`,
-    lastModified: new Date("2026-08-27"),
+    lastModified: SITE_UPDATED_AT,
     changeFrequency: route === "" ? "weekly" : "monthly",
     priority: route === "" ? 1 : 0.7,
   }));
 
   const seo: MetadataRoute.Sitemap = seoRoutes.map((route) => ({
     url: `${SITE_URL}${route === "" ? "/" : route + "/"}`,
-    lastModified: new Date("2026-08-27"),
+    lastModified: SITE_UPDATED_AT,
     changeFrequency: "monthly",
     priority: 0.85,
   }));
@@ -70,7 +72,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const blogIndex: MetadataRoute.Sitemap = [
     {
       url: `${SITE_URL}/blog/`,
-      lastModified: new Date("2026-08-27"),
+      lastModified: SITE_UPDATED_AT,
       changeFrequency: "weekly",
       priority: 0.9,
     },

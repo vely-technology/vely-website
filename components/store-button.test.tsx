@@ -11,6 +11,10 @@ describe("StoreButton", () => {
     const link = screen.getByRole("link", { name: /get vely on google play/i });
     expect(link).toHaveAttribute("href", expect.stringContaining("id=com.vely.app"));
     fireEvent.click(link);
-    expect(trackEvent).toHaveBeenCalledWith("google_play_click", { location: "test" });
+    expect(trackEvent).toHaveBeenCalledWith("google_play_click", expect.objectContaining({
+      location: "test",
+      page_path: expect.any(String),
+      page_title: expect.any(String),
+    }));
   });
 });

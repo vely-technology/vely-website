@@ -5,7 +5,7 @@ import { SITE_URL } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Dating App for Singles in the UK — Meet People Nearby | Vely",
   description:
-    "Vely is the open-minded dating app for singles in the UK. Meet singles and couples nearby in London, Manchester, Birmingham and beyond. GPS matching. Free on Android.",
+    "Looking for a dating app for singles in the UK? Vely helps you meet nearby singles and couples in London, Manchester, Birmingham, Glasgow, and beyond. Free on Android.",
   keywords: [
     "dating app for singles in UK",
     "singles dating app UK",

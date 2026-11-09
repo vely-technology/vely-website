@@ -11,7 +11,11 @@ export function StoreButton({ location = "unknown", compact = false }: { locatio
       href={PLAY_STORE_URL}
       target="_blank"
       rel="noreferrer"
-      onClick={() => trackEvent("google_play_click", { location })}
+      onClick={() => trackEvent("google_play_click", {
+        location,
+        page_path: window.location.pathname,
+        page_title: document.title,
+      })}
       aria-label="Get Vely on Google Play (opens in a new tab)"
     >
       <span className="play-mark" aria-hidden="true">▶</span>
