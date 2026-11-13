@@ -1,6 +1,6 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
-import { getAllPosts, type PostCategory } from "@/lib/blog";
+import { getIndexablePosts, categorySlug, type PostCategory } from "@/lib/blog";
 import { Icon } from "@/components/icons";
 import { SITE_URL } from "@/lib/site";
 import { BlogBrowser } from "@/components/blog-browser";
@@ -28,7 +28,7 @@ const CATEGORY_DESCRIPTIONS: Record<PostCategory, string> = {
 };
 
 export default function BlogIndexPage() {
-  const posts = getAllPosts();
+  const posts = getIndexablePosts();
 
   const blogListSchema = {
     "@context": "https://schema.org",
@@ -42,7 +42,7 @@ export default function BlogIndexPage() {
       description: p.description,
       datePublished: p.publishedAt,
       author: { "@type": "Organization", name: p.author },
-      url: `${SITE_URL}/blog/${p.slug}`,
+      url: `${SITE_URL}/blog/${p.slug}/`,
     })),
   };
 
@@ -76,10 +76,10 @@ export default function BlogIndexPage() {
           </div>
           <div className="blog-topics-grid">
             {CATEGORIES.map((cat) => (
-              <div key={cat} id={cat.toLowerCase().replace(/\s+/g, "-")} className="blog-topic-card">
+              <Link key={cat} href={`/blog/category/${categorySlug(cat)}/`} className="blog-topic-card">
                 <strong>{cat}</strong>
                 <p>{CATEGORY_DESCRIPTIONS[cat]}</p>
-              </div>
+              </Link>
             ))}
           </div>
           <div className="blog-discovery-links">

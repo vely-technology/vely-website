@@ -3,6 +3,7 @@ import { Icon } from "@/components/icons";
 import { StoreButton, IosBadge } from "@/components/store-button";
 import { PhoneShowcase } from "@/components/phone-showcase";
 import { SITE_URL } from "@/lib/site";
+import { DesktopInstall } from "@/components/desktop-install";
 
 export interface SeoPageConfig {
   /** Schema.org breadcrumb label for this page */
@@ -269,6 +270,7 @@ export function SeoPage({ config }: { config: SeoPageConfig }) {
           <div>
             <StoreButton location={`seo_cta_${slug}`} />
             <span className="cta-note">Available on Android · iOS coming soon</span>
+            <DesktopInstall location={`seo_cta_${slug}`} compact />
           </div>
         </div>
       </section>

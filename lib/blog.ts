@@ -24,15 +24,28 @@ export interface PostMeta {
   image: string;
   author: string;
   readingTime: number; // minutes
+  wordCount: number;
+  /** false for template-generated placeholder posts; served but noindexed and left out of listings and the sitemap */
+  indexable: boolean;
 }
 
 export interface Post extends PostMeta {
   contentHtml: string;
 }
 
+function countWords(text: string): number {
+  return text.trim().split(/\s+/).filter(Boolean).length;
+}
+
 function wordsPerMinute(text: string): number {
-  const words = text.trim().split(/\s+/).length;
-  return Math.max(1, Math.ceil(words / 200));
+  return Math.max(1, Math.ceil(countWords(text) / 200));
+}
+
+// Posts produced by scripts/generate-blogs.js share this sentence and have no real content.
+const PLACEHOLDER_MARKER = "This comprehensive guide explores the topic in depth";
+
+function isIndexable(content: string): boolean {
+  return !content.includes(PLACEHOLDER_MARKER) && countWords(content) >= 120;
 }
 
 const DEFAULT_COVER = "/blog/covers/default.jpg";
@@ -69,6 +82,8 @@ export function getAllPosts(): PostMeta[] {
       image: resolveImage(data.image),
       author: data.author ?? "Vely Team",
       readingTime: wordsPerMinute(content),
+      wordCount: countWords(content),
+      indexable: isIndexable(content),
     };
   });
 
@@ -113,13 +128,24 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
     image: resolveImage(data.image),
     author: data.author ?? "Vely Team",
     readingTime: wordsPerMinute(content),
+    wordCount: countWords(content),
+    indexable: isIndexable(content),
     contentHtml,
   };
 }
 
+/** Posts worth listing and indexing (excludes placeholder posts). */
+export function getIndexablePosts(): PostMeta[] {
+  return getAllPosts().filter((p) => p.indexable);
+}
+
+export function categorySlug(category: string): string {
+  return category.toLowerCase().replace(/\s+/g, "-");
+}
+
 export function getRelatedPosts(current: PostMeta, all: PostMeta[], limit = 3): PostMeta[] {
   return all
-    .filter((p) => p.slug !== current.slug)
+    .filter((p) => p.slug !== current.slug && p.indexable)
     .map((p) => {
       // Score by shared category + shared tags
       let score = 0;

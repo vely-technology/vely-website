@@ -24,10 +24,12 @@ function formatDate(iso: string): string {
 }
 
 const categories: Array<"All" | PostCategory> = ["All", "Couples", "Singles", "Safety", "City Guides", "Tips"];
+const PAGE_SIZE = 24;
 
 export function BlogBrowser({ posts }: { posts: PostMeta[] }) {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState<"All" | PostCategory>("All");
+  const [visible, setVisible] = useState(PAGE_SIZE);
   const filteredPosts = useMemo(() => {
     const normalized = query.trim().toLowerCase();
     return posts.filter((post) => {
@@ -46,7 +48,7 @@ export function BlogBrowser({ posts }: { posts: PostMeta[] }) {
         </label>
         <div className="blog-filter-list" role="group" aria-label="Article category">
           {categories.map((item) => (
-            <button key={item} type="button" className={category === item ? "blog-filter blog-filter--active" : "blog-filter"} onClick={() => setCategory(item)} aria-pressed={category === item}>
+            <button key={item} type="button" className={category === item ? "blog-filter blog-filter--active" : "blog-filter"} onClick={() => { setCategory(item); setVisible(PAGE_SIZE); }} aria-pressed={category === item}>
               {item}
             </button>
           ))}
@@ -56,17 +58,24 @@ export function BlogBrowser({ posts }: { posts: PostMeta[] }) {
         <p className="blog-empty">No articles match that search yet.</p>
       ) : (
         <div className="blog-grid">
-          {filteredPosts.map((post, index) => (
+          {filteredPosts.slice(0, visible).map((post, index) => (
             <article key={post.slug} className={`blog-card${index === 0 && !query && category === "All" ? " blog-card--featured" : ""}`}>
               <div className="blog-card-cover" aria-hidden="true"><div className="blog-card-cover-inner"><span className="blog-card-category">{post.category}</span></div></div>
               <div className="blog-card-body">
                 <div className="blog-card-meta"><span>{formatDate(post.publishedAt)}</span><span>·</span><span>{post.readingTime} min read</span></div>
-                <h2 className="blog-card-title"><Link href={`/blog/${post.slug}`}>{post.title}</Link></h2>
+                <h2 className="blog-card-title"><Link href={`/blog/${post.slug}/`}>{post.title}</Link></h2>
                 <p className="blog-card-desc">{post.description}</p>
-                <Link className="text-link blog-card-link" href={`/blog/${post.slug}`}>Read article <Icon name="arrow" size={16} /></Link>
+                <Link className="text-link blog-card-link" href={`/blog/${post.slug}/`}>Read article <Icon name="arrow" size={16} /></Link>
               </div>
             </article>
           ))}
+        </div>
+      )}
+      {filteredPosts.length > visible && (
+        <div className="blog-more">
+          <button type="button" className="button button--ghost" onClick={() => setVisible((v) => v + PAGE_SIZE)}>
+            Show more articles ({filteredPosts.length - visible} left)
+          </button>
         </div>
       )}
     </>

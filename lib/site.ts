@@ -14,17 +14,25 @@ export const SOCIAL_LINKS = [
 
 export const navigation = [
   { href: "/#features", label: "Features" },
-  { href: "/vely-app/", label: "Vely App" },
-  { href: "/blog/", label: "Blog" },
+  { href: "/dating-app-for-couples/", label: "For couples" },
   { href: "/safety/", label: "Safety" },
-  { href: "/about/", label: "About" },
+  { href: "/blog/", label: "Blog" },
+  { href: "/vely-app/", label: "Vely App" },
   { href: "/support/", label: "Support" },
-  { href: "/dating-app-for-couples-in-us/", label: "US Couples" },
-  { href: "/dating-app-for-singles-in-us/", label: "US Singles" },
-  { href: "/dating-app-for-couples-in-uk/", label: "UK Couples" },
-  { href: "/dating-app-for-singles-in-uk/", label: "UK Singles" },
-  { href: "/dating-app-for-couples-in-canada/", label: "Canada Couples" },
-  { href: "/dating-app-for-singles-in-canada/", label: "Canada Singles" },
+];
+
+/** Country and city landing pages, shown in the footer rather than the header. */
+export const locationLinks = [
+  { href: "/best-dating-app-in-india/", label: "India" },
+  { href: "/dating-app-for-couples-in-us/", label: "United States" },
+  { href: "/dating-app-for-couples-in-uk/", label: "United Kingdom" },
+  { href: "/dating-app-for-couples-in-canada/", label: "Canada" },
+  { href: "/dating-app-for-couples-in-australia/", label: "Australia" },
+  { href: "/dating-app-for-couples-in-philippines/", label: "Philippines" },
+  { href: "/dating-app-in-london/", label: "London" },
+  { href: "/dating-app-in-toronto/", label: "Toronto" },
+  { href: "/dating-app-in-sydney/", label: "Sydney" },
+  { href: "/dating-app-in-new-york-city/", label: "New York" },
 ];
 
 export const features = [

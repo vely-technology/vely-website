@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Icon } from "@/components/icons";
 import { IosBadge, StoreButton } from "@/components/store-button";
 import { PhoneShowcase } from "@/components/phone-showcase";
+import { DesktopInstall } from "@/components/desktop-install";
 import { faqs, features } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -42,12 +43,12 @@ export default function HomePage() {
               Download Vely on Google Play
             </span>
             <h1>
-              Vely app for <em>open-minded singles and couples.</em>
+              The dating app where couples and singles <em>meet together.</em>
             </h1>
             <p>
-              Download Vely, the GPS-based dating app for singles and couples exploring
-              open-minded connections. Mutual matching, verified profiles,
-              all orientations welcome.
+              Join on your own or as a couple with one shared profile. Discover people
+              nearby, like privately, and chat only when it&apos;s mutual. Open-minded,
+              verified, free on Android.
             </p>
             <div className="hero-actions">
               <StoreButton location="hero" />
@@ -61,6 +62,7 @@ export default function HomePage() {
                 <Icon name="check" size={17} /> You choose who connects
               </span>
             </div>
+            <DesktopInstall location="hero" />
           </div>
           <div className="hero-visual">
             <div className="floating-note floating-note--top">

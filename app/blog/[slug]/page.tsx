@@ -29,6 +29,7 @@ export async function generateMetadata({
     title: post.title,
     description: post.description,
     authors: [{ name: post.author }],
+    robots: post.indexable ? undefined : { index: false, follow: true },
     alternates: { canonical: `${SITE_URL}/blog/${post.slug}/` },
     openGraph: {
       type: "article",

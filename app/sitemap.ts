@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { getAllPosts } from "@/lib/blog";
+import { getIndexablePosts, categorySlug } from "@/lib/blog";
 import { SITE_URL } from "@/lib/site";
 
 export const dynamic = "force-static";
@@ -92,7 +92,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   // Individual blog posts — dynamically sourced from content/blog/
-  const posts = getAllPosts();
+  const posts = getIndexablePosts();
   const blogPosts: MetadataRoute.Sitemap = posts.map((post) => ({
     url: `${SITE_URL}/blog/${post.slug}/`,
     lastModified: new Date(post.publishedAt),
@@ -100,6 +100,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...static_, ...seo, ...blogIndex, ...blogPosts];
+  const categories = Array.from(new Set(posts.map((p) => p.category)));
+  const blogCategories: MetadataRoute.Sitemap = categories.map((c) => ({
+    url: `${SITE_URL}/blog/category/${categorySlug(c)}/`,
+    lastModified: SITE_UPDATED_AT,
+    changeFrequency: "weekly",
+    priority: 0.7,
+  }));
+
+  return [...static_, ...seo, ...blogIndex, ...blogCategories, ...blogPosts];
 }
 

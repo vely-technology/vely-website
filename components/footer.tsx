@@ -1,12 +1,13 @@
 import Link from "next/link";
-import { PLAY_STORE_URL, SOCIAL_LINKS, SUPPORT_EMAIL } from "@/lib/site";
+import { PLAY_STORE_URL, SOCIAL_LINKS, SUPPORT_EMAIL, locationLinks } from "@/lib/site";
 import { Logo } from "./icons";
 import { TrackedEmail } from "./tracked-link";
 
 const groups = [
-  { title: "Explore", links: [["Features", "/#features"], ["About", "/about"], ["Safety", "/safety"], ["Support", "/support"], ["Follow Vely", "/socials"]] },
-  { title: "Discover Vely", links: [["Vely App", "/vely-app"], ["Best Dating App in India", "/best-dating-app-in-india"], ["Dating App for Couples", "/dating-app-for-couples"], ["Feeld Alternative", "/feeld-alternative"], ["3Fun Alternative", "/3fun-alternative"], ["Nymph Alternative", "/nymph-alternative"], ["Dating App for Singles in India", "/dating-app-for-singles-in-india"], ["Safe Dating App for Women", "/safe-dating-app-for-women"], ["Dating Tips for Introverts", "/dating-tips-for-introverts"], ["US Couples", "/dating-app-for-couples-in-us"], ["US Singles", "/dating-app-for-singles-in-us"], ["UK Couples", "/dating-app-for-couples-in-uk"], ["UK Singles", "/dating-app-for-singles-in-uk"], ["Canada Couples", "/dating-app-for-couples-in-canada"], ["Canada Singles", "/dating-app-for-singles-in-canada"], ["Australia Couples", "/dating-app-for-couples-in-australia"], ["Australia Singles", "/dating-app-for-singles-in-australia"], ["Philippines Couples", "/dating-app-for-couples-in-philippines"], ["Ghana Singles", "/dating-app-for-singles-in-ghana"], ["Indian Couples", "/dating-app-for-couples-in-india"], ["Married Couples", "/dating-app-for-married-couples"], ["Singles 30+", "/dating-app-for-30-plus-singles"]] },
-  { title: "Legal", links: [["Privacy", "/privacy"], ["Terms", "/terms"], ["Delete account", "/delete-account"], ["Child safety", "/child-safety"]] },
+  { title: "Explore", links: [["Features", "/#features"], ["About", "/about/"], ["Safety", "/safety/"], ["Support", "/support/"], ["Follow Vely", "/socials/"]] },
+  { title: "Discover Vely", links: [["Vely App", "/vely-app/"], ["Best Dating App in India", "/best-dating-app-in-india/"], ["Dating App for Couples", "/dating-app-for-couples/"], ["Feeld Alternative", "/feeld-alternative/"], ["3Fun Alternative", "/3fun-alternative/"], ["Nymph Alternative", "/nymph-alternative/"], ["Dating App for Singles in India", "/dating-app-for-singles-in-india/"], ["Safe Dating App for Women", "/safe-dating-app-for-women/"], ["Dating Tips for Introverts", "/dating-tips-for-introverts/"], ["US Couples", "/dating-app-for-couples-in-us/"], ["US Singles", "/dating-app-for-singles-in-us/"], ["UK Couples", "/dating-app-for-couples-in-uk/"], ["UK Singles", "/dating-app-for-singles-in-uk/"], ["Canada Couples", "/dating-app-for-couples-in-canada/"], ["Canada Singles", "/dating-app-for-singles-in-canada/"], ["Australia Couples", "/dating-app-for-couples-in-australia/"], ["Australia Singles", "/dating-app-for-singles-in-australia/"], ["Philippines Couples", "/dating-app-for-couples-in-philippines/"], ["Ghana Singles", "/dating-app-for-singles-in-ghana/"], ["Indian Couples", "/dating-app-for-couples-in-india/"], ["Married Couples", "/dating-app-for-married-couples/"], ["Singles 30+", "/dating-app-for-30-plus-singles/"]] },
+  { title: "Locations", links: locationLinks.map((l) => [l.label, l.href]) },
+  { title: "Legal", links: [["Privacy", "/privacy/"], ["Terms", "/terms/"], ["Delete account", "/delete-account/"], ["Child safety", "/child-safety/"]] },
 ];
 
 export function Footer() {
