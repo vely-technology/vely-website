@@ -16,10 +16,9 @@ export function StoreButton({ location = "unknown", compact = false }: { locatio
         page_path: window.location.pathname,
         page_title: document.title,
       })}
-      aria-label="Get it on Google Play (opens in a new tab)"
     >
       <span className="play-mark" aria-hidden="true">▶</span>
-      <span><small>GET IT ON</small><strong>Google Play</strong></span>
+      <span><small>GET IT ON</small>{" "}<strong>Google Play</strong><span className="sr-only"> (opens in a new tab)</span></span>
       <Icon name="arrow" size={18} />
     </a>
   );

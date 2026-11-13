@@ -2,23 +2,29 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Icon } from "@/components/icons";
-import { IosBadge, StoreButton } from "@/components/store-button";
+import { StoreButton } from "@/components/store-button";
 import { PhoneShowcase } from "@/components/phone-showcase";
 import { DesktopInstall } from "@/components/desktop-install";
-import { faqs, features } from "@/lib/site";
+import { faqs, locationLinks } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Vely App - Open-Minded Dating App for Singles & Couples",
+  title: "Vely App - Dating App for Couples & Singles",
   description:
-    "Download the Vely app for open-minded dating. Singles and couples can meet nearby with GPS matching, verified profiles, and mutual likes. Free on Android.",
+    "Vely is the dating app where couples and singles meet together. One shared couple profile, GPS discovery, private likes, chat only after a mutual match. Free on Android.",
   alternates: { canonical: "https://joinvely.com/" },
   openGraph: {
-    title: "Vely App - Open-Minded Dating for Singles & Couples",
+    title: "Vely App - Dating App for Couples & Singles",
     description:
-      "GPS dating for singles and couples. Mutual matching. Verified profiles. All orientations welcome. Free on Android.",
+      "Couples and singles, meet together. Joint couple profiles, mutual matching, verified profiles. Free on Android.",
     url: "https://joinvely.com",
   },
 };
+
+const steps = [
+  { title: "Show up as yourself", text: "Create a single profile, or one joint profile with your partner. Add photos, interests and what you're open to." },
+  { title: "Discover nearby", text: "See singles and couples around you, filtered by distance and by what you're both looking for. Like privately." },
+  { title: "Match, then message", text: "A chat opens only when the interest is mutual. Take it at your own pace, in the app, until you're ready to meet." },
+];
 
 export default function HomePage() {
   const faqSchema = {
@@ -33,206 +39,138 @@ export default function HomePage() {
 
   return (
     <main id="main-content">
-      <section className="hero">
-        <div className="hero-glow hero-glow--one" />
-        <div className="hero-glow hero-glow--two" />
-        <div className="shell hero-grid">
-          <div className="hero-copy">
-            <span className="eyebrow hero-brand-eyebrow">
-              <Image src="/brand-mark.png" alt="" width={18} height={18} />
-              Download Vely on Google Play
-            </span>
+      {/* ── Hero ─────────────────────────────────────────────── */}
+      <section className="hero-photo">
+        <div className="hero-photo-media" aria-hidden="true">
+          {/* Plain <picture> so the static export can serve a small file on phones (next/image is unoptimized here). */}
+          <picture>
+            <source media="(max-width: 760px)" srcSet="/images/campus-couple-640.jpg 640w, /images/campus-couple-960.jpg 960w" sizes="100vw" />
+            <img src="/images/hero-wide.jpg" alt="" width={1600} height={900} fetchPriority="high" decoding="async" />
+          </picture>
+        </div>
+        <div className="shell">
+          <div className="hero-photo-copy">
+            <span className="eyebrow eyebrow--light">FREE ON ANDROID · 18+</span>
             <h1>
-              The dating app where couples and singles <em>meet together.</em>
+              Couples and singles, <em>meet together.</em>
             </h1>
             <p>
-              Join on your own or as a couple with one shared profile. Discover people
-              nearby, like privately, and chat only when it&apos;s mutual. Open-minded,
-              verified, free on Android.
+              One shared profile for couples, real people nearby, and a chat that opens only when it&apos;s mutual.
             </p>
             <div className="hero-actions">
               <StoreButton location="hero" />
-              <IosBadge />
             </div>
-            <div className="trust-row">
-              <span>
-                <Icon name="shield" size={17} /> Adults only, 18+
-              </span>
-              <span>
-                <Icon name="check" size={17} /> You choose who connects
-              </span>
-            </div>
-            <DesktopInstall location="hero" />
-          </div>
-          <div className="hero-visual">
-            <div className="floating-note floating-note--top">
-              <Icon name="spark" />
-              <span>
-                <strong>It’s a match</strong>
-                Start a real conversation
-              </span>
-            </div>
-            <PhoneShowcase />
-            <div className="floating-note floating-note--bottom">
-              <Icon name="shield" />
-              <span>
-                <strong>Stay in control</strong>
-                Block and report anytime
-              </span>
+            <div className="hero-trust">
+              <span><Icon name="shield" size={16} /> Verified couple profiles</span>
+              <span><Icon name="check" size={16} /> Nobody messages you first</span>
+              <span><Icon name="check" size={16} /> Block and report in one tap</span>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="audience-strip">
-        <div className="shell audience-grid">
-          <div>
-            <span>FOR SINGLES</span>
-            <strong>Find friendships and people who get you.</strong>
-          </div>
-          <i />
-          <div>
-            <span>FOR COUPLES</span>
-            <strong>Meet other people and couples together.</strong>
-          </div>
-        </div>
-      </section>
-
+      {/* ── Who it's for ────────────────────────────────────── */}
       <section className="section" id="features">
         <div className="shell">
           <div className="section-heading">
-            <span className="eyebrow">WHY VELY</span>
-            <h2>Less noise. More genuine connection.</h2>
-            <p>
-              Thoughtful discovery tools help you decide who enters your circle
-              and when the conversation begins.
-            </p>
+            <span className="eyebrow">WHO VELY IS FOR</span>
+            <h2>Two kinds of profile. One honest place to meet.</h2>
+            <p>Most apps are built for one person at a time. Vely treats couples as real users, and lets singles choose who they want to meet.</p>
           </div>
-          <div className="feature-grid">
-            {features.map((feature, index) => (
-              <article className="feature-card" key={feature.title}>
-                <div className="feature-icon">
-                  <Icon name={feature.icon} />
-                </div>
-                <span>0{index + 1}</span>
-                <h3>{feature.title}</h3>
-                <p>{feature.text}</p>
-              </article>
-            ))}
+          <div className="audience-cards">
+            <article className="audience-card">
+              <Image src="/images/campus-couple-960.jpg" alt="A couple sitting together outdoors, laughing" fill sizes="(max-width: 760px) 100vw, 50vw" />
+              <div className="audience-card-body">
+                <span className="eyebrow">FOR COUPLES</span>
+                <h3>One profile for both of you</h3>
+                <p>Discover other couples and singles together, with partner verification so everyone knows you&apos;re real.</p>
+                <Link className="text-link" href="/dating-app-for-couples/">How couple profiles work <Icon name="arrow" size={18} /></Link>
+              </div>
+            </article>
+            <article className="audience-card">
+              <Image src="/images/hero-cafe-960.jpg" alt="A woman smiling in a café" fill sizes="(max-width: 760px) 100vw, 50vw" />
+              <div className="audience-card-body">
+                <span className="eyebrow">FOR SINGLES</span>
+                <h3>Meet people who want what you want</h3>
+                <p>Choose singles, couples or both. Everyone you see has opted in to the same kind of connection.</p>
+                <Link className="text-link" href="/singles-and-couples-dating-app/">Singles on Vely <Icon name="arrow" size={18} /></Link>
+              </div>
+            </article>
           </div>
         </div>
       </section>
 
-      <section className="section section--tinted">
-        <div className="shell split">
-          <div className="showcase-stack">
-            <PhoneShowcase variant="chat" />
-            <div className="connection-orbit">
-              <span>RJ</span>
-              <i />
-              <span>AS</span>
-            </div>
-          </div>
+      {/* ── How it works ────────────────────────────────────── */}
+      <section className="section section--tinted" id="how-it-works">
+        <div className="shell how-grid">
+          <div className="how-visual"><PhoneShowcase /></div>
           <div className="split-copy">
             <span className="eyebrow">HOW IT WORKS</span>
             <h2>From nearby to saying hi.</h2>
             <ol className="steps">
-              <li>
-                <span>1</span>
-                <div>
-                  <h3>Show up as yourself</h3>
-                  <p>
-                    Create a single or couple profile, add your interests, and
-                    choose what kind of connections you want.
-                  </p>
-                </div>
-              </li>
-              <li>
-                <span>2</span>
-                <div>
-                  <h3>Discover with intention</h3>
-                  <p>
-                    Explore nearby profiles and privately decide who feels right
-                    for you.
-                  </p>
-                </div>
-              </li>
-              <li>
-                <span>3</span>
-                <div>
-                  <h3>Match, then message</h3>
-                  <p>
-                    When the interest is mutual, start chatting and take the
-                    connection at your own pace.
-                  </p>
-                </div>
-              </li>
+              {steps.map((step, index) => (
+                <li key={step.title}>
+                  <span>{index + 1}</span>
+                  <div>
+                    <h3>{step.title}</h3>
+                    <p>{step.text}</p>
+                  </div>
+                </li>
+              ))}
             </ol>
+            <div className="inline-actions" style={{ marginTop: 28 }}>
+              <StoreButton location="how_it_works" compact />
+              <Link className="text-link" href="/vely-app/">What is Vely? <Icon name="arrow" size={18} /></Link>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="section safety-preview">
-        <div className="shell split split--reverse">
-          <div className="split-copy">
-            <span className="eyebrow">SAFETY, BUILT IN</span>
+      {/* ── Safety ──────────────────────────────────────────── */}
+      <section className="section">
+        <div className="shell seo-safety-row">
+          <div className="seo-safety-icon"><Icon name="shield" size={36} /></div>
+          <div>
             <h2>Your boundaries belong to you.</h2>
             <p>
-              Every connection should begin with choice. Vely gives you practical
-              tools to manage who can reach you and act when something does not
-              feel right.
+              Adults only. Likes stay private until both sides match. Verification signals on eligible profiles,
+              partner verification for couples, and blocking and reporting one tap away.
             </p>
-            <ul className="check-list">
-              <li>
-                <Icon name="check" /> Verification signals on eligible profiles
-              </li>
-              <li>
-                <Icon name="check" /> In-app reporting and blocking
-              </li>
-              <li>
-                <Icon name="check" /> Private likes and mutual matching
-              </li>
-              <li>
-                <Icon name="check" /> Clear adults-only community standards
-              </li>
-            </ul>
-            <Link className="text-link" href="/safety/">
-              Explore Vely safety <Icon name="arrow" size={18} />
-            </Link>
+            <Link className="text-link" href="/safety/">Read the safety guidelines <Icon name="arrow" size={18} /></Link>
           </div>
-          <div className="profile-showcase">
-            <div className="shield-halo">
-              <Icon name="shield" size={40} />
-            </div>
-            <PhoneShowcase variant="profile" />
-          </div>
+        </div>
+        <div className="shell proof-row">
+          <div><strong>Mutual only</strong><span>No message requests from strangers, ever.</span></div>
+          <div><strong>Verified couples</strong><span>Both partners confirm the joint profile.</span></div>
+          <div><strong>18+ community</strong><span>Clear rules and in-app reporting.</span></div>
         </div>
       </section>
 
+      {/* ── Locations ───────────────────────────────────────── */}
       <section className="section section--tinted">
         <div className="shell">
           <div className="section-heading">
-            <span className="eyebrow">DISCOVER VELY BY LOCATION</span>
+            <span className="eyebrow">WHERE VELY IS GROWING</span>
             <h2>Find people near you.</h2>
-            <p>Explore Vely pages for singles and couples in the communities we are growing.</p>
           </div>
-          <div className="feature-grid">
-            <article className="feature-card"><h3>India</h3><p>Meet singles and couples nearby with mutual matching.</p><Link className="text-link" href="/dating-app-for-singles-in-india/">Singles in India <Icon name="arrow" size={18} /></Link><Link className="text-link" href="/dating-app-for-couples-in-india/">Couples in India <Icon name="arrow" size={18} /></Link></article>
-            <article className="feature-card"><h3>United States</h3><p>Discover open-minded connections in cities across the US.</p><Link className="text-link" href="/dating-app-for-singles-in-us/">Singles in the US <Icon name="arrow" size={18} /></Link><Link className="text-link" href="/dating-app-for-couples-in-us/">Couples in the US <Icon name="arrow" size={18} /></Link></article>
-            <article className="feature-card"><h3>Canada, UK and Australia</h3><p>Browse local dating options for singles and couples.</p><Link className="text-link" href="/dating-app-for-couples-in-canada/">Canada couples <Icon name="arrow" size={18} /></Link><Link className="text-link" href="/dating-app-for-singles-in-uk/">UK singles <Icon name="arrow" size={18} /></Link><Link className="text-link" href="/dating-app-for-singles-in-australia/">Australia singles <Icon name="arrow" size={18} /></Link></article>
+          <div className="city-chips">
+            {locationLinks.map((item) => (
+              <Link key={item.href} href={item.href}>{item.label}</Link>
+            ))}
+            <Link href="/dating-app-for-married-couples/">Married couples</Link>
+            <Link href="/dating-app-for-30-plus-singles/">Singles 30+</Link>
           </div>
         </div>
       </section>
 
+      {/* ── FAQ ─────────────────────────────────────────────── */}
       <section className="section faq-section">
         <div className="shell faq-grid">
           <div className="section-heading section-heading--left">
             <span className="eyebrow">GOOD TO KNOW</span>
-            <h2>Questions, meet answers.</h2>
+            <h2>Questions, answered.</h2>
             <p>Everything you need before getting started.</p>
-            <Link className="text-link" href="/support/">
-              Visit support <Icon name="arrow" size={18} />
-            </Link>
+            <Link className="text-link" href="/support/">Visit support <Icon name="arrow" size={18} /></Link>
           </div>
           <div className="faq-list">
             {faqs.map((faq) => (
@@ -248,17 +186,18 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── CTA ─────────────────────────────────────────────── */}
       <section className="download-cta">
         <div className="shell cta-inner">
           <div>
-            <Image className="cta-brand-mark" src="/brand-mark-white.png" alt="" width={58} height={58} />
-            <span className="eyebrow eyebrow--light">YOUR NEXT CONNECTION</span>
+            <span className="eyebrow eyebrow--light">GET STARTED FREE</span>
             <h2>There are people worth meeting.</h2>
-            <p>Discover who is nearby and see where a simple hello can lead.</p>
+            <p>Download Vely on Android and see who&apos;s nearby.</p>
           </div>
           <div>
             <StoreButton location="footer_cta" />
             <span className="cta-note">Available on Android · iOS coming soon</span>
+            <DesktopInstall location="footer_cta" compact />
           </div>
         </div>
       </section>
@@ -270,4 +209,3 @@ export default function HomePage() {
     </main>
   );
 }
-

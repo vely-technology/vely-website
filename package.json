@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@fontsource/lato": "latest",
+    "@fontsource/manrope": "^5.3.0",
     "@fontsource/montserrat": "latest",
     "@fontsource/playfair-display": "latest",
     "gray-matter": "^4.0.3",

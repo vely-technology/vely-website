@@ -1,13 +1,13 @@
 import type { Metadata, Viewport } from "next";
-import "@fontsource/lato/400.css";
-import "@fontsource/lato/700.css";
-import "@fontsource/montserrat/600.css";
-import "@fontsource/montserrat/700.css";
-import "@fontsource/playfair-display/700.css";
+import "@fontsource/manrope/400.css";
+import "@fontsource/manrope/600.css";
+import "@fontsource/manrope/700.css";
+import "@fontsource/manrope/800.css";
 import "./globals.css";
 import { Footer } from "@/components/footer";
 import { GoogleAnalytics } from "@/components/google-analytics";
 import { Header } from "@/components/header";
+import { StickyInstall } from "@/components/sticky-install";
 import { GA_MEASUREMENT_ID, PLAY_STORE_URL, SITE_URL, SOCIAL_LINKS, SUPPORT_EMAIL } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
   },
 };
 
-export const viewport: Viewport = { themeColor: "#7A244F", colorScheme: "light" };
+export const viewport: Viewport = { themeColor: "#0f0d17", colorScheme: "dark" };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const sameAs = [PLAY_STORE_URL, ...SOCIAL_LINKS.map(({ href }) => href)];
@@ -125,5 +125,5 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       },
     ],
   };
-  return <html lang="en"><body><a className="skip-link" href="#main-content">Skip to content</a><Header />{children}<Footer /><GoogleAnalytics measurementId={GA_MEASUREMENT_ID} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} /></body></html>;
+  return <html lang="en"><body><a className="skip-link" href="#main-content">Skip to content</a><Header />{children}<Footer /><StickyInstall /><GoogleAnalytics measurementId={GA_MEASUREMENT_ID} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} /></body></html>;
 }
