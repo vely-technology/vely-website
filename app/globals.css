@@ -255,3 +255,6 @@ body{background:var(--bg);color:var(--text)}
 .phone,.phone *{text-align:left}.m-tab{text-align:center}
 .m-profile-head strong{display:flex;align-items:center;gap:4px}
 .download-cta .ios-waitlist .button{background:#1a1115;color:white}
+
+.audience-card--singles img{object-position:50% 14%}.audience-card--couples img{object-position:50% 28%}
+@media(max-width:760px){.audience-card--singles img{object-position:50% 10%}}

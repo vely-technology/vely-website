@@ -84,7 +84,7 @@ export default function HomePage() {
             <p>Most apps are built for one person at a time. Vely treats couples as real users, and lets singles choose who they want to meet.</p>
           </div>
           <div className="audience-cards">
-            <article className="audience-card">
+            <article className="audience-card audience-card--couples">
               <Image src="/images/campus-couple-960.webp" alt="A couple sitting together outdoors, laughing" fill sizes="(max-width: 760px) 100vw, 50vw" />
               <div className="audience-card-body">
                 <span className="eyebrow">FOR COUPLES</span>
@@ -93,7 +93,7 @@ export default function HomePage() {
                 <Link className="text-link" href="/dating-app-for-couples/">How couple profiles work <Icon name="arrow" size={18} /></Link>
               </div>
             </article>
-            <article className="audience-card">
+            <article className="audience-card audience-card--singles">
               <Image src="/images/hero-cafe-960.webp" alt="A woman smiling in a café" fill sizes="(max-width: 760px) 100vw, 50vw" />
               <div className="audience-card-body">
                 <span className="eyebrow">FOR SINGLES</span>
