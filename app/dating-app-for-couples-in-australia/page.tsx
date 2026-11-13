@@ -91,6 +91,12 @@ const config: SeoPageConfig = {
         "Yes. Mutual matching prevents unsolicited messages. In-app blocking and reporting are available. Adults only, 18+.",
     },
   ],
+  relatedLinks: [
+    { href: "/dating-app-in-sydney/", label: "Dating app in Sydney" },
+    { href: "/dating-app-in-melbourne/", label: "Dating app in Melbourne" },
+    { href: "/dating-app-for-singles-in-australia/", label: "Dating app for singles in Australia" },
+    { href: "/feeld-alternative/", label: "Vely as a Feeld alternative" },
+  ],
   ctaHeading: "Australian couples — Vely is here.",
   ctaText:
     "Download Vely free on Android and discover other couples near you across Australia.",

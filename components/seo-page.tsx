@@ -29,6 +29,8 @@ export interface SeoPageConfig {
   steps: { title: string; text: string }[];
   /** Optional long-form SEO copy blocks */
   contentSections?: { heading: string; paragraphs: string[] }[];
+  /** Optional internal links to related pages (rendered under the copy blocks) */
+  relatedLinks?: { href: string; label: string }[];
   /** FAQ items */
   faqs: { question: string; answer: string }[];
   /** Final CTA heading */
@@ -39,7 +41,7 @@ export interface SeoPageConfig {
 
 export function SeoPage({ config }: { config: SeoPageConfig }) {
   const { slug, eyebrow, heroHeading, heroHighlight, heroSubtitle, statValue, statLabel,
-    whyHeading, benefits, steps, contentSections = [], faqs, ctaHeading, ctaText, breadcrumb } = config;
+    whyHeading, benefits, steps, contentSections = [], relatedLinks = [], faqs, ctaHeading, ctaText, breadcrumb } = config;
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -56,7 +58,7 @@ export function SeoPage({ config }: { config: SeoPageConfig }) {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
-      { "@type": "ListItem", position: 2, name: breadcrumb, item: `${SITE_URL}/${slug}` },
+      { "@type": "ListItem", position: 2, name: breadcrumb, item: `${SITE_URL}/${slug}/` },
     ],
   };
 
@@ -120,6 +122,21 @@ export function SeoPage({ config }: { config: SeoPageConfig }) {
                 ))}
               </section>
             ))}
+          </div>
+        </section>
+      )}
+
+      {relatedLinks.length > 0 && (
+        <section className="section">
+          <div className="shell narrow prose">
+            <h2>Explore more</h2>
+            <ul>
+              {relatedLinks.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href}>{link.label}</Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
       )}

@@ -43,6 +43,8 @@ const seoRoutes = [
   "/dating-app-in-new-york-city",
   "/dating-app-in-san-francisco",
   "/dating-app-in-austin",
+  "/dating-app-in-sydney",
+  "/dating-app-in-melbourne",
   "/dating-app-for-couples-in-australia",
   "/dating-app-for-singles-in-australia",
   "/dating-app-for-couples-in-philippines",
