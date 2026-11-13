@@ -4,23 +4,86 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="robots" content="noindex,follow">
-  <title>Join Vely</title>
-  <style>body{font-family:Arial,sans-serif;max-width:680px;margin:15vh auto;padding:24px;color:#24151d}a{display:inline-block;margin:10px 10px 10px 0;padding:14px 20px;background:#7a244f;color:#fff;text-decoration:none;border-radius:6px}code{font-weight:bold}</style>
+  <title>You're invited to Vely</title>
+  <meta name="description" content="A friend invited you to Vely, the dating app for singles and couples. Install it free on Android and your invite code is applied at signup.">
+  <meta property="og:title" content="You're invited to Vely">
+  <meta property="og:description" content="Join your friend on Vely, the dating app where singles and couples meet nearby with mutual matching.">
+  <meta property="og:image" content="https://joinvely.com/og-image.png">
+  <meta property="og:url" content="https://joinvely.com/invite/">
+  <meta name="theme-color" content="#7a244f">
+  <link rel="icon" href="/app-icon.png">
+  <style>
+    :root{--wine:#7a244f;--wine-dark:#511531;--wine-soft:#f8e8ed;--coral:#e65f72;--cream:#fff8f1;--paper:#fffdf9;--ink:#251c22;--muted:#74656d;--border:#eadbd5;--green:#168568}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--cream);color:var(--ink);font-family:"Lato",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+    .top{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;border-bottom:1px solid var(--border);background:var(--paper)}
+    .brand{display:flex;align-items:center;gap:10px;color:var(--wine);font-weight:700;font-size:1.25rem;text-decoration:none}
+    .brand img{width:28px;height:28px;border-radius:8px}
+    .top a.small{color:var(--muted);font-size:.9rem;text-decoration:none}
+    main{max-width:560px;margin:0 auto;padding:48px 24px 64px}
+    .eyebrow{display:inline-block;padding:6px 12px;border-radius:999px;background:var(--wine-soft);color:var(--wine);font-size:.72rem;font-weight:700;letter-spacing:.12em}
+    h1{margin:18px 0 12px;font-family:Georgia,"Playfair Display",serif;font-size:clamp(2.2rem,8vw,3.2rem);line-height:1.08;letter-spacing:-.02em}
+    h1 em{display:block;color:var(--wine);font-style:italic}
+    p.lead{margin:0 0 22px;color:var(--muted);font-size:1.1rem}
+    .code{display:none;margin:0 0 22px;padding:14px 16px;border:1px dashed var(--wine);border-radius:14px;background:var(--paper)}
+    .code.show{display:block}
+    .code span{display:block;color:var(--muted);font-size:.8rem;letter-spacing:.08em}
+    .code strong{font-size:1.5rem;letter-spacing:.14em;color:var(--wine)}
+    .actions{display:flex;flex-direction:column;gap:12px;margin:0 0 28px}
+    .btn{display:flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:12px 20px;border-radius:16px;font-weight:700;text-decoration:none;font-size:1.05rem}
+    .btn.primary{background:var(--ink);color:#fff;box-shadow:0 10px 22px rgba(37,28,34,.16)}
+    .btn.primary small{display:block;font-size:.6rem;letter-spacing:.11em;font-weight:400}
+    .btn.secondary{border:1px solid var(--border);background:var(--paper);color:var(--wine)}
+    ul.why{list-style:none;margin:0 0 28px;padding:0;display:grid;gap:12px}
+    ul.why li{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border:1px solid var(--border);border-radius:16px;background:var(--paper)}
+    ul.why li b{display:block;font-size:.98rem}
+    ul.why li span{color:var(--muted);font-size:.9rem}
+    .tick{flex:0 0 auto;width:26px;height:26px;display:grid;place-items:center;border-radius:50%;background:#ddf4ec;color:var(--green);font-weight:700}
+    .fine{color:var(--muted);font-size:.85rem}
+    .fine a{color:var(--wine)}
+    footer{padding:24px;border-top:1px solid var(--border);color:var(--muted);font-size:.8rem;text-align:center}
+    footer a{color:var(--muted)}
+  </style>
 </head>
 <body>
-  <p>YOU&apos;RE INVITED</p>
-  <h1>Meet people who get you.</h1>
-  <p>Join Vely for open-minded discovery for singles and couples.</p>
-  <p id="codeLine" hidden>Your invite code <code id="code"></code> will be saved when Vely opens.</p>
-  <a id="open" href="vely://invite">Open Vely</a>
-  <a id="play" href="https://play.google.com/store/apps/details?id=com.vely.app&amp;referrer=source%3Dinvite">Get Vely on Google Play</a>
-  <p>New here? Download Vely and enter the invite code during signup if the app does not open automatically.</p>
+  <header class="top">
+    <a class="brand" href="/"><img src="/app-icon.png" alt="">Vely</a>
+    <a class="small" href="/safety/">Safety</a>
+  </header>
+  <main>
+    <span class="eyebrow">YOU'RE INVITED</span>
+    <h1>A friend wants you on Vely.<em>Meet people who get you.</em></h1>
+    <p class="lead">Vely is the free dating app where singles and couples meet nearby. Private likes, chat only after a mutual match, and real safety tools.</p>
+
+    <div class="code" id="codeLine">
+      <span>YOUR INVITE CODE</span>
+      <strong id="code"></strong>
+      <span>It is applied automatically when Vely opens. If you install first, enter it at signup.</span>
+    </div>
+
+    <div class="actions">
+      <a class="btn primary" id="play" href="https://play.google.com/store/apps/details?id=com.vely.app&amp;referrer=source%3Dinvite">
+        <span>&#9654;</span><span><small>GET IT ON</small>Google Play</span>
+      </a>
+      <a class="btn secondary" id="open" href="vely://invite">Already have Vely? Open the app</a>
+    </div>
+
+    <ul class="why">
+      <li><span class="tick">&#10003;</span><div><b>Singles and couples welcome</b><span>Join on your own or create one joint profile with your partner.</span></div></li>
+      <li><span class="tick">&#10003;</span><div><b>Nobody messages you first</b><span>A chat opens only when you both like each other.</span></div></li>
+      <li><span class="tick">&#10003;</span><div><b>18+, block and report in one tap</b><span>Verified profiles and clear community rules.</span></div></li>
+    </ul>
+
+    <p class="fine">Free on Android. iOS is coming soon. Read our <a href="/safety/">safety guidelines</a> and <a href="/privacy/">privacy policy</a>.</p>
+  </main>
+  <footer>&copy; <span id="year"></span> Vely / MettaAi &middot; <a href="/">joinvely.com</a></footer>
   <script>
-    const code = new URLSearchParams(location.search).get('ref');
+    document.getElementById('year').textContent = new Date().getFullYear();
+    var code = new URLSearchParams(location.search).get('ref');
     if (code) {
-      const value = code.trim().toUpperCase();
+      var value = code.trim().toUpperCase();
       document.getElementById('code').textContent = value;
-      document.getElementById('codeLine').hidden = false;
+      document.getElementById('codeLine').classList.add('show');
       document.getElementById('open').href = 'vely://invite?ref=' + encodeURIComponent(value);
       document.getElementById('play').href = 'https://play.google.com/store/apps/details?id=com.vely.app&referrer=' + encodeURIComponent('source=invite&referral_code=' + value);
     }

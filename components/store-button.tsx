@@ -16,7 +16,7 @@ export function StoreButton({ location = "unknown", compact = false }: { locatio
         page_path: window.location.pathname,
         page_title: document.title,
       })}
-      aria-label="Get Vely on Google Play (opens in a new tab)"
+      aria-label="Get it on Google Play (opens in a new tab)"
     >
       <span className="play-mark" aria-hidden="true">▶</span>
       <span><small>GET IT ON</small><strong>Google Play</strong></span>

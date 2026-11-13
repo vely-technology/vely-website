@@ -8,7 +8,7 @@ vi.mock("@/lib/analytics", () => ({ trackEvent: vi.fn() }));
 describe("StoreButton", () => {
   it("links to the Android listing and records its placement", () => {
     render(<StoreButton location="test"/>);
-    const link = screen.getByRole("link", { name: /get vely on google play/i });
+    const link = screen.getByRole("link", { name: /get it on google play/i });
     expect(link).toHaveAttribute("href", expect.stringContaining("id=com.vely.app"));
     fireEvent.click(link);
     expect(trackEvent).toHaveBeenCalledWith("google_play_click", expect.objectContaining({

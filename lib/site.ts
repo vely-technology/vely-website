@@ -1,7 +1,7 @@
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://joinvely.com";
 export const PLAY_STORE_URL =
   process.env.NEXT_PUBLIC_PLAY_STORE_URL ||
-  "https://play.google.com/store/apps/details?id=com.vely.app&utm_source=website&utm_medium=joinvely&utm_campaign=homepage";
+  "https://play.google.com/store/apps/details?id=com.vely.app&referrer=utm_source%3Dwebsite%26utm_medium%3Djoinvely%26utm_campaign%3Dhomepage";
 export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 export const SUPPORT_EMAIL = "hello@joinvely.com";
 export const SOCIAL_LINKS = [

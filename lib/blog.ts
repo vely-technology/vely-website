@@ -35,6 +35,16 @@ function wordsPerMinute(text: string): number {
   return Math.max(1, Math.ceil(words / 200));
 }
 
+const DEFAULT_COVER = "/blog/covers/default.jpg";
+
+/** Use the post's cover only if the file actually exists under public/, else the default cover. */
+function resolveImage(image: unknown): string {
+  if (typeof image === "string" && image.startsWith("/")) {
+    if (fs.existsSync(path.join(process.cwd(), "public", image))) return image;
+  }
+  return DEFAULT_COVER;
+}
+
 function slugFromFilename(filename: string): string {
   return filename.replace(/\.mdx?$/, "");
 }
@@ -56,7 +66,7 @@ export function getAllPosts(): PostMeta[] {
       publishedAt: data.publishedAt ?? "2026-01-01",
       category: (data.category as PostCategory) ?? "Tips",
       tags: Array.isArray(data.tags) ? data.tags : [],
-      image: data.image ?? "/blog/covers/default.jpg",
+      image: resolveImage(data.image),
       author: data.author ?? "Vely Team",
       readingTime: wordsPerMinute(content),
     };
@@ -100,7 +110,7 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
     publishedAt: data.publishedAt ?? "2026-01-01",
     category: (data.category as PostCategory) ?? "Tips",
     tags: Array.isArray(data.tags) ? data.tags : [],
-    image: data.image ?? "/blog/covers/default.jpg",
+    image: resolveImage(data.image),
     author: data.author ?? "Vely Team",
     readingTime: wordsPerMinute(content),
     contentHtml,
