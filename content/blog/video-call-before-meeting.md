@@ -12,7 +12,7 @@ A short video call before meeting in person is the cheapest safety step in datin
 
 ## What a video call protects you from
 
-- **Catfishing.** Old, filtered or borrowed photos are common. A live call ends the question in seconds. Our guide to [identifying a catfish](/blog/identifying-catfish/) lists the other signs.
+- **Catfishing.** Old, filtered or borrowed photos are common. A live call ends the question in seconds. Our [dating safety checklist](/blog/dating-app-safety-checklist/) lists the other signs.
 - **Wasted first dates.** Plenty of people are great on text and flat in conversation. Better to learn that from your sofa.
 - **Pressure.** Someone who refuses any call but pushes hard to meet, or to move to another app, is telling you something. Treat refusal plus pressure as a reason to stop.
 - **Scams.** Romance and investment scams rely on never appearing on camera. A refused call is a near-universal tell.
