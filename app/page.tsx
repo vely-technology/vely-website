@@ -1,6 +1,7 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { preload } from "react-dom";
 import { Icon } from "@/components/icons";
 import { StoreButton } from "@/components/store-button";
 import { PhoneShowcase } from "@/components/phone-showcase";
@@ -27,6 +28,9 @@ const steps = [
 ];
 
 export default function HomePage() {
+  // Kick off the hero photo before the JS bundles compete for bandwidth (it is the LCP element).
+  preload("/images/hero-mobile.jpg", { as: "image", fetchPriority: "high", media: "(max-width: 760px)" });
+  preload("/images/hero-wide.jpg", { as: "image", fetchPriority: "high", media: "(min-width: 761px)" });
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
