@@ -29,8 +29,8 @@ const steps = [
 
 export default function HomePage() {
   // Kick off the hero photo before the JS bundles compete for bandwidth (it is the LCP element).
-  preload("/images/hero-mobile.jpg", { as: "image", fetchPriority: "high", media: "(max-width: 760px)" });
-  preload("/images/hero-wide.jpg", { as: "image", fetchPriority: "high", media: "(min-width: 761px)" });
+  preload("/images/hero-mobile.webp", { as: "image", fetchPriority: "high", media: "(max-width: 760px)", type: "image/webp" });
+  preload("/images/hero-wide.webp", { as: "image", fetchPriority: "high", media: "(min-width: 761px)", type: "image/webp" });
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -48,7 +48,9 @@ export default function HomePage() {
         <div className="hero-photo-media" aria-hidden="true">
           {/* Plain <picture> so the static export can serve a small file on phones (next/image is unoptimized here). */}
           <picture>
+            <source media="(max-width: 760px)" type="image/webp" srcSet="/images/hero-mobile.webp" />
             <source media="(max-width: 760px)" srcSet="/images/hero-mobile.jpg" />
+            <source type="image/webp" srcSet="/images/hero-wide.webp" />
             <img src="/images/hero-wide.jpg" alt="" width={1600} height={900} fetchPriority="high" decoding="async" />
           </picture>
         </div>
@@ -83,7 +85,7 @@ export default function HomePage() {
           </div>
           <div className="audience-cards">
             <article className="audience-card">
-              <Image src="/images/campus-couple-960.jpg" alt="A couple sitting together outdoors, laughing" fill sizes="(max-width: 760px) 100vw, 50vw" />
+              <Image src="/images/campus-couple-960.webp" alt="A couple sitting together outdoors, laughing" fill sizes="(max-width: 760px) 100vw, 50vw" />
               <div className="audience-card-body">
                 <span className="eyebrow">FOR COUPLES</span>
                 <h3>One profile for both of you</h3>
@@ -92,7 +94,7 @@ export default function HomePage() {
               </div>
             </article>
             <article className="audience-card">
-              <Image src="/images/hero-cafe-960.jpg" alt="A woman smiling in a café" fill sizes="(max-width: 760px) 100vw, 50vw" />
+              <Image src="/images/hero-cafe-960.webp" alt="A woman smiling in a café" fill sizes="(max-width: 760px) 100vw, 50vw" />
               <div className="audience-card-body">
                 <span className="eyebrow">FOR SINGLES</span>
                 <h3>Meet people who want what you want</h3>

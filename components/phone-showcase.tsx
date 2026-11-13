@@ -19,7 +19,7 @@ export function PhoneShowcase({ variant = "discover" }: { variant?: "discover" |
 }
 
 function DiscoverScreen() {
-  return <><div className="discovery-copy"><small>NEAR YOU</small><strong>Find your people</strong></div><div className="profile-card"><div className="profile-art"><Image src="/images/campus-couple-640.jpg" alt="" fill sizes="280px" /></div><div className="profile-meta"><div><strong className="name">Aarav & Sana <span>✓</span></strong><p><Icon name="pin" size={13}/> 4 km away</p></div><strong>Couple</strong></div><p className="profile-bio">Coffee, live music, and finding the city’s best weekend spots.</p></div><div className="card-actions"><button aria-label="Pass">×</button><button className="like" aria-label="Like"><Icon name="heart" size={23}/></button><button aria-label="More">•••</button></div></>;
+  return <><div className="discovery-copy"><small>NEAR YOU</small><strong>Find your people</strong></div><div className="profile-card"><div className="profile-art"><Image src="/images/campus-couple-640.webp" alt="" fill sizes="280px" /></div><div className="profile-meta"><div><strong className="name">Aarav & Sana <span>✓</span></strong><p><Icon name="pin" size={13}/> 4 km away</p></div><strong>Couple</strong></div><p className="profile-bio">Coffee, live music, and finding the city’s best weekend spots.</p></div><div className="card-actions"><button aria-label="Pass">×</button><button className="like" aria-label="Like"><Icon name="heart" size={23}/></button><button aria-label="More">•••</button></div></>;
 }
 
 function ChatScreen() {
