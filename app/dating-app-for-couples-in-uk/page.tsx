@@ -93,6 +93,12 @@ const config: SeoPageConfig = {
         "Yes. Mutual matching prevents unsolicited messages. In-app blocking and reporting are available. Adults only, 18+.",
     },
   ],
+  relatedLinks: [
+    { href: "/dating-app-in-london/", label: "Dating app in London" },
+    { href: "/dating-app-in-manchester/", label: "Dating app in Manchester" },
+    { href: "/dating-app-for-singles-in-uk/", label: "Dating app for singles in the UK" },
+    { href: "/dating-app-for-married-couples/", label: "Dating app for married couples" },
+  ],
   ctaHeading: "UK couples — Vely is here.",
   ctaText:
     "Download Vely free on Android and discover open-minded couples near you across the UK.",

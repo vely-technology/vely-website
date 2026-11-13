@@ -98,6 +98,8 @@ const config: SeoPageConfig = {
   relatedLinks: [
     { href: "/dating-app-in-sydney/", label: "Dating app in Sydney" },
     { href: "/dating-app-in-melbourne/", label: "Dating app in Melbourne" },
+    { href: "/dating-app-in-brisbane/", label: "Dating app in Brisbane" },
+    { href: "/dating-app-in-perth/", label: "Dating app in Perth" },
     { href: "/dating-app-for-couples-in-australia/", label: "Dating app for couples in Australia" },
     { href: "/feeld-alternative/", label: "Vely as a Feeld alternative" },
   ],

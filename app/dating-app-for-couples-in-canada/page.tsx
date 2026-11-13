@@ -96,6 +96,12 @@ const config: SeoPageConfig = {
         "Yes. Mutual matching prevents unsolicited messages. In-app blocking and reporting are available. Verification signals help ensure safety. Adults only, 18+.",
     },
   ],
+  relatedLinks: [
+    { href: "/dating-app-in-toronto/", label: "Dating app in Toronto" },
+    { href: "/dating-app-in-vancouver/", label: "Dating app in Vancouver" },
+    { href: "/dating-app-for-singles-in-canada/", label: "Dating app for singles in Canada" },
+    { href: "/dating-app-for-married-couples/", label: "Dating app for married couples" },
+  ],
   ctaHeading: "Canadian couples — Vely is here.",
   ctaText:
     "Download Vely free on Android and discover other couples near you across Canada.",
