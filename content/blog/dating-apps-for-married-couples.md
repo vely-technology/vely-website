@@ -28,7 +28,7 @@ Look for blocking, reporting, profile controls, and clear community rules. Avoid
 
 Vely supports joint couple profiles, nearby discovery, private likes, and chat after a mutual match. Couples can meet other couples or singles, while keeping their profile clear about what they are looking for.
 
-Explore the [Vely page for married couples](/dating-app-for-married-couples/) and the [couples dating app guide](/blog/dating-apps-for-couples-what-to-look-for).
+Explore the [Vely page for married couples](/dating-app-for-married-couples/) and the [couples dating app guide](/blog/dating-apps-for-couples-what-to-look-for/).
 
 ## Set boundaries before matching
 

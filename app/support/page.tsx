@@ -34,7 +34,7 @@ export default function SupportPage() {
               <h2>{title}</h2>
               <p>{text}</p>
               {title === "Privacy and deletion" && (
-                <Link href="/delete-account">Account deletion steps <Icon name="arrow" size={16}/></Link>
+                <Link href="/delete-account/">Account deletion steps <Icon name="arrow" size={16}/></Link>
               )}
             </article>
           ))}

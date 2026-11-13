@@ -1,5 +1,5 @@
 ---
-title: "How Mutual Matching Works on Dating Apps"
+title: "What Is a Mutual Match? How Mutual Matching Works on Dating Apps"
 description: "What mutual matching means, why it reduces unwanted messages, and how it improves dating app conversations."
 publishedAt: "2026-08-27"
 category: "Safety"

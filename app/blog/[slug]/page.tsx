@@ -29,12 +29,12 @@ export async function generateMetadata({
     title: post.title,
     description: post.description,
     authors: [{ name: post.author }],
-    alternates: { canonical: `${SITE_URL}/blog/${post.slug}` },
+    alternates: { canonical: `${SITE_URL}/blog/${post.slug}/` },
     openGraph: {
       type: "article",
       title: post.title,
       description: post.description,
-      url: `${SITE_URL}/blog/${post.slug}`,
+      url: `${SITE_URL}/blog/${post.slug}/`,
       publishedTime: post.publishedAt,
       authors: [post.author],
       images: post.image
@@ -99,7 +99,7 @@ export default async function BlogPostPage({
           <nav className="post-breadcrumb" aria-label="Breadcrumb">
             <Link href="/">Home</Link>
             <Icon name="arrow" size={13} />
-            <Link href="/blog">Blog</Link>
+            <Link href="/blog/">Blog</Link>
             <Icon name="arrow" size={13} />
             <span>{post.category}</span>
           </nav>

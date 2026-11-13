@@ -1,0 +1,64 @@
+# Vely
+
+> Vely is a free Android dating and social discovery app for singles and couples. Users create an individual or a joint couple profile, discover people nearby with GPS-based matching, like privately, and chat only after a mutual match. Available on Google Play; website at https://joinvely.com.
+
+## Key facts
+
+- Platform: Android (Google Play). Package name com.vely.app. iOS is not available yet.
+- Price: free to download; core discovery, matching and messaging are free. Optional Premium subscription.
+- Profile types: single (individual) and couple (one joint profile for two partners).
+- Matching: mutual matching only. A chat opens only when both sides have liked each other.
+- Discovery: location-based (GPS), with distance and preference filters.
+- Safety: 18+ only, block and report tools, verification signals, partner verification for couple profiles, in-app support.
+- Referral program: invite friends who install and sign up to unlock Premium.
+- Support email: hello@joinvely.com
+- Main markets: India, United States, Canada, United Kingdom, Australia, Philippines, Ghana.
+
+## Core pages
+
+- [Home](https://joinvely.com/): what Vely is and how it works
+- [Dating app for couples](https://joinvely.com/dating-app-for-couples/): joint couple profiles, discovering other couples and singles
+- [Singles and couples dating app](https://joinvely.com/singles-and-couples-dating-app/): how both profile types coexist
+- [Dating app for married couples](https://joinvely.com/dating-app-for-married-couples/)
+- [Open-minded dating app](https://joinvely.com/open-minded-dating-app/)
+- [Safety](https://joinvely.com/safety/): safety guidelines and tools
+- [Support](https://joinvely.com/support/): contact form and help
+- [About](https://joinvely.com/about/)
+
+## Comparisons and alternatives
+
+- [Feeld alternative](https://joinvely.com/feeld-alternative/)
+- [3Fun alternative](https://joinvely.com/3fun-alternative/)
+- [Nymph alternative](https://joinvely.com/nymph-alternative/)
+- [Best Feeld, 3Fun and Nymph alternatives](https://joinvely.com/blog/best-feeld-3fun-nymph-alternatives/)
+- [Vely vs Feeld](https://joinvely.com/blog/vely-vs-feeld/)
+- [Vely vs Nymph](https://joinvely.com/blog/vely-vs-nymph/)
+- [Vely vs 3Fun](https://joinvely.com/blog/vely-vs-3fun/)
+
+## Country and city pages
+
+- India: https://joinvely.com/best-dating-app-in-india/ , https://joinvely.com/dating-app-for-couples-in-india/ , https://joinvely.com/dating-app-for-singles-in-india/
+- United States: https://joinvely.com/dating-app-for-couples-in-us/ , https://joinvely.com/dating-app-for-singles-in-us/
+- United Kingdom: https://joinvely.com/dating-app-for-couples-in-uk/ , https://joinvely.com/dating-app-for-singles-in-uk/
+- Canada: https://joinvely.com/dating-app-for-couples-in-canada/ , https://joinvely.com/dating-app-for-singles-in-canada/
+- Australia: https://joinvely.com/dating-app-for-couples-in-australia/ , https://joinvely.com/dating-app-for-singles-in-australia/
+- Philippines: https://joinvely.com/dating-app-for-couples-in-philippines/ , https://joinvely.com/dating-app-for-singles-in-philippines/
+- Ghana: https://joinvely.com/dating-app-for-couples-in-ghana/ , https://joinvely.com/dating-app-for-singles-in-ghana/
+
+## Guides
+
+- [How mutual matching works](https://joinvely.com/blog/how-mutual-matching-works/)
+- [Hookup app vs relationship app vs dating app](https://joinvely.com/blog/relationship-app-vs-dating-app/)
+- [Dating apps for couples: what to look for](https://joinvely.com/blog/dating-apps-for-couples-what-to-look-for/)
+- [Blog index](https://joinvely.com/blog/)
+
+## Legal
+
+- [Privacy policy](https://joinvely.com/privacy/)
+- [Terms of service](https://joinvely.com/terms/)
+- [Account deletion](https://joinvely.com/delete-account/)
+- [Child safety standards](https://joinvely.com/child-safety/)
+
+## Sitemap
+
+https://joinvely.com/sitemap.xml

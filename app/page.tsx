@@ -194,7 +194,7 @@ export default function HomePage() {
                 <Icon name="check" /> Clear adults-only community standards
               </li>
             </ul>
-            <Link className="text-link" href="/safety">
+            <Link className="text-link" href="/safety/">
               Explore Vely safety <Icon name="arrow" size={18} />
             </Link>
           </div>
@@ -228,7 +228,7 @@ export default function HomePage() {
             <span className="eyebrow">GOOD TO KNOW</span>
             <h2>Questions, meet answers.</h2>
             <p>Everything you need before getting started.</p>
-            <Link className="text-link" href="/support">
+            <Link className="text-link" href="/support/">
               Visit support <Icon name="arrow" size={18} />
             </Link>
           </div>

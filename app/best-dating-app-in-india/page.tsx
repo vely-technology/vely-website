@@ -3,11 +3,13 @@ import { SeoPage, type SeoPageConfig } from "@/components/seo-page";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Best Dating App in India for Singles & Couples",
+  title: "Best Dating Apps in India (2026): Top Picks for Singles & Couples",
   description:
-    "Looking for the best dating app in India? Vely helps singles and couples meet nearby through mutual matching, GPS discovery, chat, and safety controls.",
+    "Searching for the best dating apps in India? See what matters in 2026: nearby discovery, mutual matching, safety controls, and couple profiles. Vely is free on Android.",
   keywords: [
+    "best dating apps in India",
     "best dating app in India",
+    "top dating apps in India",
     "dating app India",
     "Indian dating app",
     "relationship app India",
@@ -16,7 +18,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: `${SITE_URL}/best-dating-app-in-india/` },
   openGraph: {
-    title: "Best Dating App in India for Singles & Couples | Vely",
+    title: "Best Dating Apps in India (2026) for Singles & Couples | Vely",
     description:
       "Meet nearby singles and couples in India with mutual matching, profile controls, and in-app chat.",
     url: `${SITE_URL}/best-dating-app-in-india/`,

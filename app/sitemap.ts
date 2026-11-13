@@ -1,10 +1,10 @@
-﻿import type { MetadataRoute } from "next";
+import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog";
 import { SITE_URL } from "@/lib/site";
 
 export const dynamic = "force-static";
 
-const SITE_UPDATED_AT = new Date("2026-11-09");
+const SITE_UPDATED_AT = new Date("2026-11-12");
 
 const staticRoutes = [
   "",
@@ -15,6 +15,7 @@ const staticRoutes = [
   "/terms",
   "/delete-account",
   "/child-safety",
+  "/socials",
 ];
 
 const seoRoutes = [
@@ -51,6 +52,10 @@ const seoRoutes = [
   "/dating-app-for-couples-in-india",
   "/dating-app-for-married-couples",
   "/dating-app-for-30-plus-singles",
+  // Competitor comparison pages
+  "/feeld-alternative",
+  "/3fun-alternative",
+  "/nymph-alternative",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

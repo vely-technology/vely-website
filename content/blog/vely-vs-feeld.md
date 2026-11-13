@@ -56,6 +56,6 @@ Feeld is a strong choice for broad, exploratory dating. Vely is a focused altern
 
 [Download Vely free on Google Play](https://play.google.com/store/apps/details?id=com.vely.app&utm_source=blog&utm_medium=comparison&utm_campaign=vely_vs_feeld) and see whether a simpler discovery experience fits you.
 
-For more guidance, read [what to look for in a dating app for couples](/blog/dating-apps-for-couples-what-to-look-for).
+For more guidance, read [what to look for in a dating app for couples](/blog/dating-apps-for-couples-what-to-look-for/).
 
 Looking for a dedicated option? Explore the [Vely Feeld alternative](/feeld-alternative/).
