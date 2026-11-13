@@ -132,6 +132,22 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── Inside the app ──────────────────────────────────── */}
+      <section className="section">
+        <div className="shell">
+          <div className="section-heading">
+            <span className="eyebrow">INSIDE THE APP</span>
+            <h2>Built around people, not swipes.</h2>
+            <p>Illustrations of the Vely screens. Names and conversations shown are examples.</p>
+          </div>
+          <div className="screens-strip">
+            <figure><PhoneShowcase variant="discover" /><figcaption><strong>Discover</strong>See why you might connect before you like.</figcaption></figure>
+            <figure><PhoneShowcase variant="profile" /><figcaption><strong>Couple profile</strong>One profile, partner-verified.</figcaption></figure>
+            <figure><PhoneShowcase variant="messages" /><figcaption><strong>Messages</strong>Only mutual matches can write to you.</figcaption></figure>
+          </div>
+        </div>
+      </section>
+
       {/* ── Safety ──────────────────────────────────────────── */}
       <section className="section">
         <div className="shell seo-safety-row">
