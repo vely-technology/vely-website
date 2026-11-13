@@ -3,7 +3,7 @@ import { SeoPage, type SeoPageConfig } from "@/components/seo-page";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Dating App for Singles and Couples in the US | Vely",
+  title: "Dating App for Singles and Couples in the US",
   description:
     "Meet singles and couples nearby in the US with Vely. Open-minded dating, mutual matching, and safer conversations. Free on Android.",
   keywords: [

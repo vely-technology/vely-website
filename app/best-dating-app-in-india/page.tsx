@@ -76,6 +76,27 @@ const config: SeoPageConfig = {
       ],
     },
   ],
+  comparisonTable: {
+    heading: "Best dating apps in India (2026): how they compare",
+    intro:
+      "Most lists of the best dating apps in India rank by download count. This table compares what actually changes your experience: whether couples are supported, whether strangers can message you, and what the free tier lets you do. Details for other apps are based on their public listings and can change.",
+    columns: ["App", "Couple profiles", "Who can message you", "Free to chat after a match", "Best for"],
+    rows: [
+      ["Vely", "Yes, one joint profile", "Only mutual matches", "Yes", "Singles and couples meeting nearby"],
+      ["Tinder", "No", "Only mutual matches", "Yes", "Volume; largest pool of singles"],
+      ["Bumble", "No", "Women message first after a match", "Yes", "Singles who want women to open"],
+      ["Hinge", "No", "Only after a like is accepted", "Yes", "Singles seeking relationships"],
+      ["Aisle", "No", "Limited free invites", "Partly; invites are capped", "Indian singles seeking marriage-minded matches"],
+      ["Feeld", "Linked profiles", "Only mutual matches", "Partly; filters are paid", "Open-minded singles and couples, paid tier"],
+    ],
+  },
+  relatedLinks: [
+    { href: "/dating-app-for-couples-in-india/", label: "Dating app for couples in India" },
+    { href: "/dating-app-for-singles-in-india/", label: "Dating app for singles in India" },
+    { href: "/safe-dating-app-in-india/", label: "Safe dating app in India" },
+    { href: "/blog/best-couples-dating-apps-india/", label: "Best couples dating apps in India" },
+    { href: "/blog/how-to-meet-new-people-in-india/", label: "How to meet new people in India" },
+  ],
   steps: [
     {
       title: "Download Vely on Android",

@@ -3,7 +3,7 @@ import { SeoPage, type SeoPageConfig } from "@/components/seo-page";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Dating App in Singapore — Meet Singles & Couples Near You | Vely",
+  title: "Dating App in Singapore — Meet Singles & Couples Near You",
   description:
     "Vely is the open-minded dating app in Singapore for singles and couples. GPS matching in Orchard, Tanjong Pagar, Bugis and beyond. Free on Android.",
   keywords: [

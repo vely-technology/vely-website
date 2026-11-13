@@ -31,6 +31,8 @@ export interface SeoPageConfig {
   contentSections?: { heading: string; paragraphs: string[] }[];
   /** Optional internal links to related pages (rendered under the copy blocks) */
   relatedLinks?: { href: string; label: string }[];
+  /** Optional comparison table rendered after the copy blocks */
+  comparisonTable?: { heading: string; intro?: string; columns: string[]; rows: string[][] };
   /** FAQ items */
   faqs: { question: string; answer: string }[];
   /** Final CTA heading */
@@ -41,7 +43,7 @@ export interface SeoPageConfig {
 
 export function SeoPage({ config }: { config: SeoPageConfig }) {
   const { slug, eyebrow, heroHeading, heroHighlight, heroSubtitle, statValue, statLabel,
-    whyHeading, benefits, steps, contentSections = [], relatedLinks = [], faqs, ctaHeading, ctaText, breadcrumb } = config;
+    whyHeading, benefits, steps, contentSections = [], relatedLinks = [], comparisonTable, faqs, ctaHeading, ctaText, breadcrumb } = config;
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -122,6 +124,33 @@ export function SeoPage({ config }: { config: SeoPageConfig }) {
                 ))}
               </section>
             ))}
+          </div>
+        </section>
+      )}
+
+      {comparisonTable && (
+        <section className="section">
+          <div className="shell narrow prose">
+            <h2>{comparisonTable.heading}</h2>
+            {comparisonTable.intro && <p>{comparisonTable.intro}</p>}
+            <div style={{ overflowX: "auto" }}>
+              <table>
+                <thead>
+                  <tr>
+                    {comparisonTable.columns.map((column) => (
+                      <th key={column} scope="col">{column}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {comparisonTable.rows.map((row) => (
+                    <tr key={row[0]}>
+                      {row.map((cell, i) => (i === 0 ? <th key={cell} scope="row">{cell}</th> : <td key={`${row[0]}-${i}`}>{cell}</td>))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </section>
       )}

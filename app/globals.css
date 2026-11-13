@@ -150,3 +150,6 @@ h1{font-size:clamp(3rem,7vw,6.6rem)}h2{font-size:clamp(2.3rem,4.5vw,4.25rem)}h3{
 @media(max-width:600px){.blog-grid,.blog-grid--compact{grid-template-columns:1fr}.blog-card--featured{grid-column:auto}.blog-topics-grid{grid-template-columns:1fr 1fr}.post-header{padding:55px 0 40px}.post-header h1{font-size:clamp(2rem,9vw,3rem)}.post-layout{padding-block:44px 60px}.post-cta-inline{flex-direction:column;align-items:flex-start}.post-sidebar{flex-direction:column}}
 @media(max-width:760px){.seo-conversion-grid{grid-template-columns:1fr}}
 @media(max-width:760px){.social-links-grid{grid-template-columns:1fr}}
+
+/* Comparison tables inside long-form SEO copy */
+.prose table{width:100%;margin:8px 0 28px;border-collapse:collapse;font-size:.95rem;line-height:1.45}.prose th,.prose td{padding:12px 14px;border:1px solid var(--border);text-align:left;vertical-align:top}.prose thead th{background:var(--wine-soft);color:var(--ink);font-family:"Montserrat";font-size:.78rem;font-weight:700}.prose tbody th{color:var(--ink);font-weight:700;white-space:nowrap}.prose tbody tr:nth-child(even){background:var(--paper)}.prose ul{padding-left:22px}.prose ul li{margin:8px 0}.prose a{color:var(--wine);font-weight:700;text-decoration:underline;text-underline-offset:3px}

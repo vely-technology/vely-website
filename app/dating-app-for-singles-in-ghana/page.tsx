@@ -3,7 +3,7 @@ import { SeoPage, type SeoPageConfig } from "@/components/seo-page";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Dating App for Singles in Ghana — Meet People Nearby | Vely",
+  title: "Dating App for Singles in Ghana — Meet People Nearby",
   description:
     "Vely is the open-minded dating app for singles in Ghana. Meet singles and couples nearby in Accra, Kumasi, Tamale and beyond. Free on Android.",
   keywords: [

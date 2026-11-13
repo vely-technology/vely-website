@@ -3,7 +3,7 @@ import { SeoPage, type SeoPageConfig } from "@/components/seo-page";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Couples Dating App India — Meet Other Couples Nearby | Vely",
+  title: "Couples Dating App India — Meet Other Couples Nearby",
   description:
     "Vely is the couples dating app for India. Meet other couples nearby in Mumbai, Delhi, Bangalore, Hyderabad and beyond. Mutual matching, GPS discovery, and safety controls. Free on Android.",
   keywords: [

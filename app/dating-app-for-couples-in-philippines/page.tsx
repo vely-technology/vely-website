@@ -3,7 +3,7 @@ import { SeoPage, type SeoPageConfig } from "@/components/seo-page";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Dating App for Couples in the Philippines — Meet Other Couples | Vely",
+  title: "Dating App for Couples in the Philippines — Meet Other Couples",
   description:
     "Vely is the open-minded dating app for couples in the Philippines. Meet other couples nearby in Manila, Quezon City, Cebu, and beyond. Free on Android.",
   keywords: [

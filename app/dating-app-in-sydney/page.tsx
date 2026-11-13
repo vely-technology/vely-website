@@ -3,7 +3,7 @@ import { SeoPage, type SeoPageConfig } from "@/components/seo-page";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Dating App in Sydney for Singles & Couples | Vely",
+  title: "Dating App in Sydney for Singles & Couples",
   description:
     "Meet singles and couples in Sydney with Vely. GPS discovery across the Inner West, Eastern Suburbs, North Shore and Parramatta, mutual matching, safe chat. Free on Android.",
   keywords: [

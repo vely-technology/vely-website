@@ -3,16 +3,18 @@ import { SeoPage, type SeoPageConfig } from "@/components/seo-page";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Dating App for Married Couples — Meet Other Couples Together | Vely",
+  title: "Married Dating App for Couples (Free): Meet Other Couples Together",
   description:
-    "Vely is the dating app for married couples. Create a joint profile, discover other married couples nearby, and connect through mutual matching. Free on Android.",
+    "Vely is a free married dating app for couples who want to meet other couples and singles together. One joint profile, private likes, mutual matching, and safety tools. Android.",
   keywords: [
     "dating app for married couples",
-    "married couples dating app",
-    "app for married couples to meet couples",
+    "married dating app",
+    "married dating app free",
+    "married couples dating sites",
+    "dating site for married people",
+    "app for married couples",
     "married couples meet other couples",
     "joint profile dating app",
-    "married dating app for couples",
   ],
   alternates: { canonical: `${SITE_URL}/dating-app-for-married-couples/` },
   openGraph: {
@@ -50,6 +52,29 @@ const config: SeoPageConfig = {
       title: "Private, safe, and mutual",
       text: "Likes stay private until both couples match. Verified profiles, in-app blocking, and mutual matching keep every interaction safe and respectful.",
     },
+  ],
+  contentSections: [
+    {
+      heading: "Is Vely a married dating app, or a dating app for married couples?",
+      paragraphs: [
+        "Both phrases get searched, and they mean different things. A \"married dating app\" usually means an app for one married person to date on their own, often discreetly. A \"dating app for married couples\" means an app the two of you use together, as a couple, to meet other couples or singles. Vely is the second kind. Both partners are on one joint profile, both can see every like and every chat, and the people you meet know from the first look that they are talking to a couple.",
+        "That makes Vely a poor fit for anyone looking for a secret affair, and a very good fit for married couples who want new couple friends, activity partners, an open or ethically non-monogamous arrangement they have agreed on together, or simply a social life that is not limited to the people they already know.",
+      ],
+    },
+    {
+      heading: "What married couples get on Vely",
+      paragraphs: [
+        "Free to download and free to use: creating a couple profile, discovering nearby couples and singles, liking and chatting after a match are all included. Premium adds unlimited likes and lets you see who liked you, but nothing you need to get started is behind a paywall.",
+        "Discreet by design: nobody can message you until you have both liked each other, your likes stay private until then, and you can block or report any account in one tap. Couple profiles can also verify the partner, so other users know both people are real and on board.",
+        "Built for real distance: Vely uses your location so the couples you see are actually near you, whether you are in Mumbai, Toronto, London, Sydney or Manila, and you set how far you are willing to travel.",
+      ],
+    },
+  ],
+  relatedLinks: [
+    { href: "/blog/dating-apps-for-married-couples/", label: "Guide: what to look for in a dating app for married couples" },
+    { href: "/dating-app-for-couples/", label: "Dating app for couples" },
+    { href: "/blog/meeting-safely-couples/", label: "Meeting other couples safely" },
+    { href: "/open-minded-dating-app/", label: "Open-minded dating app" },
   ],
   steps: [
     {
@@ -90,6 +115,16 @@ const config: SeoPageConfig = {
       question: "Is Vely free for married couples?",
       answer:
         "Yes. Vely is free to download on Android. Core features including couple profile creation, discovery, and matching are free. Premium adds unlimited likes.",
+    },
+    {
+      question: "Is Vely a married dating site for affairs?",
+      answer:
+        "No. Vely is for couples who join together on one shared profile, not for one partner dating in secret. If you are a married couple looking to meet other couples or singles as a pair, it is built for you.",
+    },
+    {
+      question: "Can married couples meet singles on Vely too?",
+      answer:
+        "Yes. Set your discovery preferences to couples, singles, or both. Singles who use Vely choose whether they want to meet couples, so everyone you see has opted in.",
     },
   ],
   ctaHeading: "Married couples — Vely is built for you.",

@@ -3,7 +3,7 @@ import { SeoPage, type SeoPageConfig } from "@/components/seo-page";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Dating App for 30+ Singles — Meet People Over 30 | Vely",
+  title: "Dating App for 30+ Singles — Meet People Over 30",
   description:
     "Vely is the open-minded dating app for singles over 30. Meet singles and couples near you — designed for adults 30+. GPS discovery, mutual matching, and safety controls. Free on Android.",
   keywords: [
