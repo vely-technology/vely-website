@@ -44,7 +44,7 @@ export default function HomePage() {
         <div className="hero-photo-media" aria-hidden="true">
           {/* Plain <picture> so the static export can serve a small file on phones (next/image is unoptimized here). */}
           <picture>
-            <source media="(max-width: 760px)" srcSet="/images/campus-couple-640.jpg 640w, /images/campus-couple-960.jpg 960w" sizes="100vw" />
+            <source media="(max-width: 760px)" srcSet="/images/hero-mobile.jpg" />
             <img src="/images/hero-wide.jpg" alt="" width={1600} height={900} fetchPriority="high" decoding="async" />
           </picture>
         </div>
