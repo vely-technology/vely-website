@@ -192,7 +192,7 @@ export function SeoPage({ config }: { config: SeoPageConfig }) {
       <section className="section seo-conversion-section">
         <div className="shell"><div className="section-heading"><span className="eyebrow">WHY START NOW</span><h2>A clearer way to connect.</h2></div><div className="seo-conversion-grid">
           <article><Icon name="shield" size={28} /><h3>Mutual by design</h3><p>Conversations begin after both sides choose to connect.</p></article>
-          <article><Icon name="heart" size={28} /><h3>Invite and earn</h3><p>Invite 5 people who install and sign up to unlock 1 month of Premium.</p><Link className="text-link" href="/support/">See referral help <Icon name="arrow" size={16} /></Link></article>
+          <article><Icon name="heart" size={28} /><h3>Invite and earn</h3><p>Invite 3 people who install and sign up to unlock 1 month of Premium.</p><Link className="text-link" href="/support/">See referral help <Icon name="arrow" size={16} /></Link></article>
           <article><Icon name="spark" size={28} /><h3>Free to start</h3><p>Download Vely and explore the core experience before choosing Premium.</p></article>
         </div></div>
       </section>
