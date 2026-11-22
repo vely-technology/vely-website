@@ -62,6 +62,7 @@ export default function HomePage() {
             </h1>
             <p>
               One shared profile for couples, real people nearby, and a chat that opens only when it&apos;s mutual.
+              Women and FF/FM couples see who liked them for free.
             </p>
             <div className="hero-actions">
               <StoreButton location="hero" />
@@ -69,7 +70,7 @@ export default function HomePage() {
             <div className="hero-trust">
               <span><Icon name="shield" size={16} /> Verified couple profiles</span>
               <span><Icon name="check" size={16} /> Nobody messages you first</span>
-              <span><Icon name="check" size={16} /> Block and report in one tap</span>
+              <span><Icon name="check" size={16} /> Women see their likes free</span>
             </div>
           </div>
         </div>
@@ -98,7 +99,7 @@ export default function HomePage() {
               <div className="audience-card-body">
                 <span className="eyebrow">FOR SINGLES</span>
                 <h3>Meet people who want what you want</h3>
-                <p>Choose singles, couples or both. Everyone you see has opted in to the same kind of connection.</p>
+                <p>Choose singles, couples or both. Everyone you see has opted in to the same kind of connection, and single women see who liked them for free.</p>
                 <Link className="text-link" href="/singles-and-couples-dating-app/">Singles on Vely <Icon name="arrow" size={18} /></Link>
               </div>
             </article>

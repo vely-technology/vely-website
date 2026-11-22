@@ -66,7 +66,7 @@ export const faqs = [
   {
     question: "Is Vely free?",
     answer:
-      "Yes, Vely is free to download. Core features including discovery, matching, and messaging are free. Vely Premium unlocks unlimited likes, see who liked you, and priority matching.",
+      "Yes, Vely is free to download. Core features including discovery, matching, and messaging are free. Single women and couples with a woman (FF or FM) can also see who liked them without paying. For everyone else, Vely Premium shows who liked you, and every member can get unlimited likes and priority matching with Premium, starting with a weekly plan you can cancel anytime.",
   },
   {
     question: "Can I report or block someone?",
